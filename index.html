@@ -175,9 +175,18 @@
     @keyframes partners-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .partner-card { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; height: 88px; min-width: 200px; padding: 0 36px; border-radius: 18px; background: white; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
     .partner-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -18px rgba(22,163,74,0.35); border-color: #bbf7d0; }
-    .partner-wordmark { font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.01em; color: #1e293b; transition: color 0.3s ease; white-space: nowrap; }
-    .partner-wordmark .em { color: #16a34a; }
-    .partner-card:hover .partner-wordmark { color: #15803d; }
+    .brand-wm { font-family: 'Baloo 2', 'Arial Black', sans-serif; font-weight: 900; font-size: 28px; letter-spacing: -0.02em; white-space: nowrap; line-height: 1; transition: transform 0.3s ease; }
+    .partner-card:hover .brand-wm { transform: scale(1.04); }
+    .brand-karcher   { color: #000; font-style: italic; }
+    .brand-karcher .ac { color: #ffc72c; }
+    .brand-sika      { color: #d7262c; letter-spacing: 0.1em; }
+    .brand-sikkens   { color: #005faa; font-family: 'Georgia', serif; font-weight: 900; font-style: italic; letter-spacing: 0.01em; }
+    .brand-algimouss { color: #2e7d32; }
+    .brand-algimouss .leaf { color: #8bc34a; }
+    .brand-owatrol   { color: #0b2a4a; text-transform: uppercase; font-size: 24px; letter-spacing: 0.12em; }
+    .brand-guard     { color: #003c71; text-transform: uppercase; font-size: 22px; letter-spacing: 0.08em; }
+    .brand-guard .em { color: #d7262c; }
+    .brand-rubson    { color: #ffd100; background: #1a1a1a; padding: 6px 18px; border-radius: 6px; letter-spacing: 0.04em; }
     /* Premium icon badges (gradient brand→accent) */
     .icon-badge-premium { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 60%, #1a6cc2 100%); box-shadow: 0 10px 24px -8px rgba(22,163,74,0.5), inset 0 1px 0 rgba(255,255,255,0.25); color: white; }
     .icon-badge-premium::after { content:''; position: absolute; inset: 0; border-radius: 16px; background: linear-gradient(135deg, rgba(255,255,255,0.35), transparent 50%); pointer-events: none; }
@@ -244,9 +253,9 @@
 ════════════════════════════════════════════════════════════ -->
 <nav id="navbar" class="sticky top-0 left-0 right-0 z-50 bg-white border-b border-ink-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-24">
+    <div class="flex items-center justify-between h-28">
       <a href="index.html" class="flex items-center gap-2" aria-label="Ecovaptoiture — Accueil">
-        <img src="assets/img/logo-ecovap.png" alt="Ecovaptoiture" class="h-16 md:h-20 w-auto logo-navbar" />
+        <img src="assets/img/logo-ecovap.png" alt="Ecovaptoiture" class="h-20 md:h-28 w-auto logo-navbar" />
       </a>
       <div class="hidden lg:flex items-center gap-8">
         <a href="index.html" class="nav-link">Accueil</a>
@@ -595,8 +604,8 @@
 
       <div class="lg:col-span-3 reveal-right">
         <div id="ba-slider" class="ba-slider aspect-[16/10]">
-          <div class="ba-after"><img src="https://images.unsplash.com/photo-1625165064842-bad97d082d59?w=1200&q=85&auto=format&fit=crop" alt="Après rénovation" /></div>
-          <div id="ba-before" class="ba-before"><img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=1200&q=85&auto=format&fit=crop" alt="Avant rénovation" /></div>
+          <div class="ba-after"><img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1400&q=90&auto=format&fit=crop" alt="Toiture propre après nettoyage vapeur" style="filter: saturate(1.05) brightness(1.02);" /></div>
+          <div id="ba-before" class="ba-before"><img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1400&q=90&auto=format&fit=crop" alt="Toiture avant nettoyage — mousses et lichens" style="filter: saturate(0.55) brightness(0.78) contrast(1.15) hue-rotate(60deg) sepia(0.35);" /></div>
           <div class="ba-label before">Avant</div>
           <div class="ba-label after">Après</div>
           <div id="ba-handle" class="ba-handle">
@@ -919,21 +928,21 @@
   </div>
   <div class="partners-marquee">
     <div class="partners-track">
-      <div class="partner-card"><span class="partner-wordmark">K<span class="em">ä</span>rcher</span></div>
-      <div class="partner-card"><span class="partner-wordmark">Algi<span class="em">mouss</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Owa<span class="em">trol</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Sik<span class="em">kens</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Guard <span class="em">Industrie</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Sika<span class="em">gard</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Rub<span class="em">son</span></span></div>
+      <div class="partner-card"><span class="brand-wm brand-karcher">K<span class="ac">Ä</span>RCHER</span></div>
+      <div class="partner-card"><span class="brand-wm brand-algimouss"><span class="leaf">◆</span> Algimouss</span></div>
+      <div class="partner-card"><span class="brand-wm brand-owatrol">Owatrol</span></div>
+      <div class="partner-card"><span class="brand-wm brand-sikkens">Sikkens</span></div>
+      <div class="partner-card"><span class="brand-wm brand-guard">Guard <span class="em">Industrie</span></span></div>
+      <div class="partner-card"><span class="brand-wm brand-sika">SIKAGARD</span></div>
+      <div class="partner-card"><span class="brand-wm brand-rubson">RUBSON</span></div>
       <!-- duplicate for seamless loop -->
-      <div class="partner-card"><span class="partner-wordmark">K<span class="em">ä</span>rcher</span></div>
-      <div class="partner-card"><span class="partner-wordmark">Algi<span class="em">mouss</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Owa<span class="em">trol</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Sik<span class="em">kens</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Guard <span class="em">Industrie</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Sika<span class="em">gard</span></span></div>
-      <div class="partner-card"><span class="partner-wordmark">Rub<span class="em">son</span></span></div>
+      <div class="partner-card"><span class="brand-wm brand-karcher">K<span class="ac">Ä</span>RCHER</span></div>
+      <div class="partner-card"><span class="brand-wm brand-algimouss"><span class="leaf">◆</span> Algimouss</span></div>
+      <div class="partner-card"><span class="brand-wm brand-owatrol">Owatrol</span></div>
+      <div class="partner-card"><span class="brand-wm brand-sikkens">Sikkens</span></div>
+      <div class="partner-card"><span class="brand-wm brand-guard">Guard <span class="em">Industrie</span></span></div>
+      <div class="partner-card"><span class="brand-wm brand-sika">SIKAGARD</span></div>
+      <div class="partner-card"><span class="brand-wm brand-rubson">RUBSON</span></div>
     </div>
   </div>
 </section>
