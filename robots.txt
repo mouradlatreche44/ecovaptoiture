@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ecovaptoiture.fr/sitemap.xml
