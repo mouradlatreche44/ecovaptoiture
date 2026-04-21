@@ -433,6 +433,20 @@
     ::-webkit-scrollbar { width: 10px; }
     ::-webkit-scrollbar-track { background: #f7f9f8; }
     ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2ea35e, #1a6cc2); border-radius: 10px; }
+  
+    /* ═══ HERO STEAM — variante F (canvas particles) ═══ */
+    canvas.steam { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; display: block; }
+    .text-backdrop { position: absolute; inset: 0; z-index: 3; pointer-events: none; background: linear-gradient(90deg, rgba(5,20,11,.5) 0%, rgba(5,20,11,.2) 35%, transparent 55%); }
+    .hero-em { font-style: normal; color: #86efac; text-shadow: 0 0 24px rgba(134,239,172,.35); }
+    .hero-title-shadow { text-shadow: 0 2px 14px rgba(10,46,23,.6); }
+    .hero-radial-overlay::before {
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(134,239,172,.15), transparent 55%),
+        radial-gradient(ellipse at 80% 30%, rgba(59,130,246,.22), transparent 55%);
+    }
+    @media (prefers-reduced-motion: reduce) { canvas.steam { display: none; } }
+
   </style>
 </head>
 <body>
@@ -499,7 +513,8 @@
   <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 32px 32px;"></div>
 
   <!-- Particules vapeur -->
-  <div class="vapor-field" id="vapor-field"></div>
+  <canvas class="steam" data-mode="full"></canvas>
+  <div class="text-backdrop"></div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -516,7 +531,7 @@
           </div>
         </div>
 
-        <h1 class="font-heading font-bold text-white text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[0.98] tracking-tight mt-6 mb-6 reveal">
+        <h1 class="font-heading font-bold text-white text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[0.98] tracking-tight mt-6 mb-6 reveal hero-title-shadow">
           Votre toiture,<br/>
           nettoyée à la <span class="relative inline-block">
             <span style="background: linear-gradient(95deg, #7fd79f 0%, #bbd7fc 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">vapeur.</span>
@@ -998,7 +1013,8 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="relative rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #156b3c 0%, #115432 40%, #1a6cc2 100%); box-shadow: 0 40px 80px -40px rgba(21,107,60,0.55);">
       <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5), transparent 40%);"></div>
-      <div class="vapor-field" id="vapor-field-devis"></div>
+      <canvas class="steam" data-mode="full"></canvas>
+  <div class="text-backdrop"></div>
 
       <div class="relative grid grid-cols-1 lg:grid-cols-5 gap-0">
         <div class="lg:col-span-2 relative min-h-[320px] lg:min-h-full">
@@ -1264,5 +1280,59 @@
   });
 </script>
 
+<script>
+
+  // ── Hero steam canvas (variante F) ─────────────────────
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function initSteam(cvs){
+      const ctx = cvs.getContext('2d');
+      const isMobile = window.innerWidth < 640;
+      const maxN = isMobile ? 30 : 58;
+      let W, H, particles = [];
+      function resize(){
+        const dpr = window.devicePixelRatio || 1;
+        const r = cvs.getBoundingClientRect();
+        W = r.width; H = r.height;
+        cvs.width = W*dpr; cvs.height = H*dpr;
+        ctx.setTransform(dpr,0,0,dpr,0,0);
+      }
+      function spawn(){
+        particles.push({
+          x: Math.random()*W, y: H + 20,
+          r: 30 + Math.random()*70,
+          vy: -0.3 - Math.random()*0.5,
+          vx: (Math.random()-.5)*0.3,
+          life: 0, max: 260 + Math.random()*180,
+          hueShift: Math.random()
+        });
+      }
+      function tick(){
+        ctx.clearRect(0,0,W,H);
+        if (particles.length < maxN && Math.random() < 0.6) spawn();
+        for (let i=particles.length-1; i>=0; i--){
+          const p = particles[i];
+          p.life++; p.x += p.vx; p.y += p.vy; p.r += 0.25;
+          const t = p.life / p.max;
+          if (t > 1){ particles.splice(i,1); continue; }
+          const alpha = Math.sin(t*Math.PI) * 0.22;
+          const tint = p.hueShift > .6 ? '134,239,172' : (p.hueShift > .3 ? '255,255,255' : '191,219,254');
+          const grd = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+          grd.addColorStop(0, 'rgba('+tint+','+alpha+')');
+          grd.addColorStop(0.4, 'rgba('+tint+','+(alpha*0.5)+')');
+          grd.addColorStop(1, 'rgba('+tint+',0)');
+          ctx.fillStyle = grd;
+          ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
+        }
+        requestAnimationFrame(tick);
+      }
+      resize(); tick();
+      window.addEventListener('resize', resize);
+      document.addEventListener('visibilitychange', () => { if (!document.hidden) resize(); });
+    }
+    document.querySelectorAll('canvas.steam').forEach(initSteam);
+  })();
+
+</script>
 </body>
 </html>
