@@ -16,7 +16,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -24,9 +24,44 @@
     tailwind.config = { theme: { extend: {
       fontFamily: { heading: ['Baloo 2', 'Nunito', 'sans-serif'], body: ['Inter', 'sans-serif'] },
       colors: {
-        brand: { 50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#22c55e',600:'#16a34a',700:'#15803d',800:'#166534',900:'#14532d',950:'#0a2e17' },
-        accent: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1a6cc2',700:'#1d4ed8',800:'#1e40af',900:'#0a3578' },
-        ink: { 50:'#f8fafc',100:'#f1f5f9',200:'#e2e8f0',300:'#cbd5e1',400:'#94a3b8',500:'#64748b',600:'#475569',700:'#334155',800:'#1e293b',900:'#0f172a' },
+        brand: {
+              50:  '#f0fbf4',
+              100: '#d9f4e1',
+              200: '#b3e9c6',
+              300: '#7fd79f',
+              400: '#4cc07a',
+              500: '#2ea35e',
+              600: '#1e8549',
+              700: '#156b3c',
+              800: '#115432',
+              900: '#0d3f27',
+              950: '#072418',
+            },
+        accent: {
+              50:  '#eff6ff',
+              100: '#dbeafe',
+              200: '#bbd7fc',
+              300: '#8fbcf7',
+              400: '#5d9bef',
+              500: '#3a7fe1',
+              600: '#1a6cc2',
+              700: '#1556a0',
+              800: '#124781',
+              900: '#0f3b68',
+              950: '#0a2447',
+            },
+        ink: {
+              50:  '#f7f9f8',
+              100: '#eef2f0',
+              200: '#dbe2dd',
+              300: '#b8c4bb',
+              400: '#8a9a8f',
+              500: '#5f7166',
+              600: '#445349',
+              700: '#334038',
+              800: '#1f2823',
+              900: '#0f1411',
+            },
       },
     }}};
   </script>
@@ -35,29 +70,29 @@
     body { font-family:'Inter',sans-serif; background:#fff; color:#0f172a; overflow-x:hidden; line-height:1.6; }
     h1,h2,h3,h4,h5 { font-family:'Baloo 2','Nunito',sans-serif; letter-spacing:-0.01em; font-weight:800; }
     .nav-link { position:relative; font-family:'Baloo 2','Nunito',sans-serif; font-weight:700; font-size:14px; }
-    .nav-link::after { content:''; position:absolute; bottom:-6px; left:0; width:0; height:2px; background:#16a34a; transition:width 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-6px; left:0; width:0; height:2px; background:#1e8549; transition:width 0.3s; }
     .nav-link:hover::after { width:100%; }
-    .section-label { display:inline-flex; align-items:center; gap:8px; color:#16a34a; font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:16px; }
-    .section-label::before { content:''; display:inline-block; width:28px; height:2px; background:#16a34a; }
-    .btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#16a34a; color:white; padding:14px 28px; border-radius:999px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:14px; letter-spacing:0.04em; transition:all 0.25s cubic-bezier(0.4,0,0.2,1); box-shadow:0 10px 30px -8px rgba(22,163,74,0.55); }
-    .btn-primary:hover { background:#15803d; transform:translateY(-2px); box-shadow:0 14px 36px -8px rgba(22,163,74,0.7); }
+    .section-label { display:inline-flex; align-items:center; gap:8px; color:#1e8549; font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; margin-bottom:16px; }
+    .section-label::before { content:''; display:inline-block; width:28px; height:2px; background:#1e8549; }
+    .btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:#1e8549; color:white; padding:14px 28px; border-radius:999px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:14px; letter-spacing:0.04em; transition:all 0.25s cubic-bezier(0.4,0,0.2,1); box-shadow:0 10px 30px -8px rgba(22,163,74,0.55); }
+    .btn-primary:hover { background:#156b3c; transform:translateY(-2px); box-shadow:0 14px 36px -8px rgba(22,163,74,0.7); }
     .btn-outline-light { display:inline-flex; align-items:center; gap:8px; background:transparent; color:white; padding:13px 28px; border-radius:999px; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:14px; border:1.5px solid rgba(255,255,255,0.45); transition:all 0.25s ease; }
-    .btn-outline-light:hover { background:white; color:#15803d; border-color:white; }
+    .btn-outline-light:hover { background:white; color:#156b3c; border-color:white; }
     .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
     .reveal.visible { opacity:1; transform:translateY(0); }
     .svc-card { background:white; border:1px solid #e2e8f0; border-radius:20px; overflow:hidden; transition:all 0.4s cubic-bezier(0.23,1,0.32,1); }
-    .svc-card:hover { transform:translateY(-6px); box-shadow:0 30px 60px -20px rgba(22,163,74,0.25); border-color:#86efac; }
+    .svc-card:hover { transform:translateY(-6px); box-shadow:0 30px 60px -20px rgba(22,163,74,0.25); border-color:#7fd79f; }
     .svc-card .img-wrap { aspect-ratio:4/3; overflow:hidden; }
     .svc-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s cubic-bezier(0.23,1,0.32,1); }
     .svc-card:hover img { transform:scale(1.06); }
     .faq-item { border-top:1px solid #e2e8f0; }
-    .faq-item summary { padding:20px 0; cursor:pointer; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:17px; color:#14532d; display:flex; justify-content:space-between; align-items:center; list-style:none; }
+    .faq-item summary { padding:20px 0; cursor:pointer; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:17px; color:#0d3f27; display:flex; justify-content:space-between; align-items:center; list-style:none; }
     .faq-item summary::-webkit-details-marker { display:none; }
-    .faq-item summary::after { content:'+'; font-size:22px; color:#16a34a; transition:transform 0.25s ease; }
+    .faq-item summary::after { content:'+'; font-size:22px; color:#1e8549; transition:transform 0.25s ease; }
     .faq-item[open] summary::after { transform:rotate(45deg); }
     .faq-item p { padding-bottom:20px; color:#475569; line-height:1.65; }
     .hero-badge { display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:999px; background:rgba(255,255,255,0.12); color:white; font-family:'Baloo 2',sans-serif; font-size:12px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.18); }
-    .step-dot { width:48px; height:48px; border-radius:50%; background:#dcfce7; color:#15803d; display:flex; align-items:center; justify-content:center; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:18px; flex-shrink:0; }
+    .step-dot { width:48px; height:48px; border-radius:50%; background:#d9f4e1; color:#156b3c; display:flex; align-items:center; justify-content:center; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:18px; flex-shrink:0; }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Hydrofuge de toiture et façade","provider":{"@type":"LocalBusiness","name":"Ecovaptoiture","telephone":"+33602020301"},"areaServed":["Landes","Pyrénées-Atlantiques"],"description":"Hydrofuge microporeux longue durée, traitement anti-mousse écologique."}</script>
 </head>
@@ -113,13 +148,13 @@
 </nav>
 
 <!-- HERO -->
-<section class="relative overflow-hidden" style="background:linear-gradient(135deg,#15803d 0%,#166534 100%);">
+<section class="relative overflow-hidden" style="background:linear-gradient(135deg,#156b3c 0%,#115432 100%);">
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
     <div class="max-w-3xl">
       <div class="hero-badge reveal"><span class="w-2 h-2 rounded-full bg-brand-300 animate-pulse"></span> Garantie 10 ans</div>
       <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mt-6 mb-6 reveal">
         Protection hydrofuge<br/>
-        <span style="color:#bbf7d0;">longue durée</span>
+        <span style="color:#b3e9c6;">longue durée</span>
       </h1>
       <p class="text-white/85 text-lg sm:text-xl font-light mb-8 max-w-2xl reveal">
         Après nettoyage, nous appliquons un hydrofuge microporeux qui protège vos toitures et façades des infiltrations tout en laissant respirer le matériau. Effet déperlant 10 ans.
