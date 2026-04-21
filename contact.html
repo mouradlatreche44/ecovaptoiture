@@ -162,6 +162,23 @@
     .info-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; }
     .info-item + .info-item { border-top: 1px solid #e2e8f0; }
     .info-icon { flex-shrink: 0; width: 44px; height: 44px; background: #fef2f2; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #2ea35e; }
+  
+    /* ═══ VAPEUR — particules animées (v2) ═══ */
+    .vapor-field { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+    .vapor-particle {
+      position: absolute; bottom: -40px; width: 40px; height: 40px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.25) 40%, transparent 70%);
+      filter: blur(8px);
+      animation: rise 7s ease-in infinite;
+      opacity: 0;
+    }
+    @keyframes rise {
+      0%   { transform: translate(0, 0) scale(0.5); opacity: 0; }
+      15%  { opacity: 0.9; }
+      60%  { opacity: 0.7; }
+      100% { transform: translate(var(--dx, 20px), -100vh) scale(2.5); opacity: 0; }
+    }
+
   </style>
 </head>
 <body>
@@ -214,11 +231,8 @@
 </nav>
 
 <!-- HERO -->
-<section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0">
-    <img src="assets/img/nettoyage de toiture-installation.jpeg" alt="Contactez Ecovaptoiture" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 hero-overlay"></div>
-  </div>
+<section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden" style="background:linear-gradient(135deg,#0d3f27 0%,#115432 30%,#124781 70%,#0f3b68 100%);">
+  <div class="vapor-field"></div>
   <div class="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
     <div class="inline-flex items-center gap-2 text-brand-300 text-xs font-semibold tracking-[0.2em] uppercase mb-4 reveal">
       <span class="w-6 h-px bg-brand-300"></span>
@@ -627,5 +641,23 @@
 
 <script src="assets/js/app.js"></script>
 
+<script>
+
+  // ── Particules vapeur hero (v2) ─────────────────────────
+  function seedVapor(container, count){
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('div');
+      p.className = 'vapor-particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDelay = (Math.random() * 7) + 's';
+      p.style.animationDuration = (5 + Math.random() * 5) + 's';
+      p.style.setProperty('--dx', (Math.random() * 60 - 30) + 'px');
+      p.style.width = p.style.height = (30 + Math.random() * 50) + 'px';
+      container.appendChild(p);
+    }
+  }
+  document.querySelectorAll('.vapor-field').forEach(f => seedVapor(f, 14));
+
+</script>
 </body>
 </html>
