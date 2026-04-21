@@ -4,54 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ecovaptoiture — Nettoyage écologique de toiture à la vapeur | Landes & Pays Basque</title>
-  <meta name="description" content="Ecovaptoiture : spécialiste du nettoyage vapeur écologique de toitures, terrasses et bardages dans les Landes (40) et Pyrénées-Atlantiques (64). Sans produit chimique, sans haute pression. Démoussage, hydrofuge, gouttières. Devis gratuit." />
-  <meta name="keywords" content="nettoyage toiture Landes, démoussage Pays Basque, nettoyage vapeur écologique, hydrofuge toiture 40, entretien gouttière Dax, traitement anti-mousse Bayonne, nettoyeur toiture Saint-Vincent-de-Tyrosse, démoussage Biarritz, hydrofuge Pau, nettoyage terrasse bois, bardage" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Ecovaptoiture — Nettoyage écologique de toiture à la vapeur" />
-  <meta property="og:description" content="Nettoyage vapeur basse pression, sans produit chimique. Toitures, terrasses, bardages. Landes (40) & Pyrénées-Atlantiques (64). Devis gratuit." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Ecovaptoiture : spécialiste du nettoyage vapeur écologique de toitures, terrasses et bardages dans les Landes (40) et Pyrénées-Atlantiques (64). Sans produit chimique. Devis gratuit." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Lucide icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-  <!-- JSON-LD LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Ecovaptoiture",
-    "image": "https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1200&q=80",
-    "description": "Nettoyage écologique de toitures à la vapeur basse pression dans les Landes et Pyrénées-Atlantiques.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Saint-Vincent-de-Tyrosse",
-      "postalCode": "40230",
-      "addressLocality": "Saint-Vincent-de-Tyrosse",
-      "addressRegion": "Landes",
-      "addressCountry": "FR"
-    },
-    "geo": { "@type": "GeoCoordinates", "latitude": 43.6631, "longitude": -1.3050 },
-    "telephone": "+33602020301",
-    "email": "ecovaptoiture@gmail.com",
-    "url": "https://ecovaptoiture.fr",
-    "priceRange": "€€",
-    "areaServed": [
-      { "@type": "AdministrativeArea", "name": "Landes (40)" },
-      { "@type": "AdministrativeArea", "name": "Pyrénées-Atlantiques (64)" }
-    ],
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "19:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
-    ]
-  }
-  </script>
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -60,44 +19,48 @@
           fontFamily: {
             heading: ['Baloo 2', 'sans-serif'],
             body: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
           },
           colors: {
-            brand: {
-              50:  '#f0fdf4',
-              100: '#dcfce7',
-              200: '#bbf7d0',
-              300: '#86efac',
-              400: '#4ade80',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
-              800: '#166534',
-              900: '#15803d',
-              950: '#0a2e17',
+            // VERT — "ÉCO" du logo
+            leaf: {
+              50:  '#f0fbf4',
+              100: '#d9f4e1',
+              200: '#b3e9c6',
+              300: '#7fd79f',
+              400: '#4cc07a',
+              500: '#2ea35e',
+              600: '#1e8549',
+              700: '#156b3c',
+              800: '#115432',
+              900: '#0d3f27',
+              950: '#072418',
             },
-            accent: {
-              50:  '#f0fdf4',
-              100: '#dcfce7',
-              200: '#bbf7d0',
-              300: '#86efac',
-              400: '#4ade80',
-              500: '#22c55e',
-              600: '#16a34a',
-              700: '#15803d',
-              800: '#166534',
-              900: '#14532d',
+            // BLEU — "VAP" du logo
+            vapor: {
+              50:  '#eff6ff',
+              100: '#dbeafe',
+              200: '#bbd7fc',
+              300: '#8fbcf7',
+              400: '#5d9bef',
+              500: '#3a7fe1',
+              600: '#1a6cc2',   // bleu pur du logo
+              700: '#1556a0',
+              800: '#124781',
+              900: '#0f3b68',
+              950: '#0a2447',
             },
             ink: {
-              50:  '#f8fafc',
-              100: '#f1f5f9',
-              200: '#e2e8f0',
-              300: '#cbd5e1',
-              400: '#94a3b8',
-              500: '#64748b',
-              600: '#475569',
-              700: '#334155',
-              800: '#1e293b',
-              900: '#0f172a',
+              50:  '#f7f9f8',
+              100: '#eef2f0',
+              200: '#dbe2dd',
+              300: '#b8c4bb',
+              400: '#8a9a8f',
+              500: '#5f7166',
+              600: '#445349',
+              700: '#334038',
+              800: '#1f2823',
+              900: '#0f1411',
             },
           },
         },
@@ -105,132 +68,371 @@
     };
   </script>
 
-  <link rel="stylesheet" href="assets/css/custom.css" />
-
   <style>
-    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #0f172a; overflow-x: hidden; line-height: 1.6; }
-    h1, h2, h3, h4, h5 { font-family: 'Baloo 2', 'Nunito', sans-serif; letter-spacing: -0.02em; }
+    :root {
+      --leaf: #156b3c;
+      --leaf-500: #2ea35e;
+      --leaf-600: #1e8549;
+      --vapor: #1a6cc2;
+      --vapor-500: #3a7fe1;
+      --ink: #0f1411;
+      --paper: #fafbfa;
+    }
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; line-height: 1.55; }
+    h1, h2, h3, h4, h5 { font-family: 'Baloo 2', sans-serif; letter-spacing: -0.02em; }
 
-    /* ── Navbar ── */
-    #navbar { transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
-    .nav-link { position: relative; font-family: 'Baloo 2', 'Nunito', sans-serif; font-weight: 700; transition: color 0.2s ease; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
-    .nav-link::after { content:''; position:absolute; bottom:-6px; left:0; width:0; height:2px; background:#22c55e; transition: width 0.3s ease; }
+    /* ═══ TOKENS ═══ */
+    .text-gradient-logo {
+      background: linear-gradient(92deg, #156b3c 0%, #2ea35e 40%, #3a7fe1 65%, #1a6cc2 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .bg-gradient-logo { background: linear-gradient(92deg, #156b3c 0%, #2ea35e 40%, #3a7fe1 65%, #1a6cc2 100%); }
+    .bg-gradient-logo-dark { background: linear-gradient(180deg, #0d3f27 0%, #0a2447 100%); }
+
+    /* ═══ NAV ═══ */
+    .nav-link { position: relative; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: #334038; transition: color .2s ease; }
+    .nav-link:hover { color: var(--leaf); }
+    .nav-link::after { content:''; position:absolute; bottom:-8px; left:0; width:0; height:2px; background: linear-gradient(90deg, var(--leaf-500), var(--vapor)); transition: width .3s cubic-bezier(.4,0,.2,1); }
     .nav-link:hover::after { width: 100%; }
+    .nav-link.active { color: var(--leaf); }
+    .nav-link.active::after { width: 100%; }
 
-    /* ── Section label ── */
-    .section-label { display: inline-flex; align-items: center; gap: 8px; color: #22c55e; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 16px; }
-    .section-label::before { content:''; display:inline-block; width: 28px; height: 2px; background: #22c55e; }
+    /* ═══ BUTTONS ═══ */
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding: 14px 26px; border-radius: 999px; font-weight: 700; font-size: 13px; letter-spacing: 0.09em; text-transform: uppercase; transition: all .28s cubic-bezier(.4,0,.2,1); font-family: 'Inter', sans-serif; cursor: pointer; border: none; }
+    .btn-primary {
+      background: linear-gradient(95deg, #156b3c 0%, #1e8549 48%, #1a6cc2 100%);
+      color: white;
+      box-shadow: 0 10px 28px -8px rgba(26,108,194,0.45), 0 6px 18px -6px rgba(21,107,60,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -10px rgba(26,108,194,0.55), 0 10px 22px -8px rgba(21,107,60,0.5); }
+    .btn-leaf { background: var(--leaf); color: white; box-shadow: 0 8px 20px -6px rgba(21,107,60,0.45); }
+    .btn-leaf:hover { background: var(--leaf-600); transform: translateY(-2px); }
+    .btn-white { background: white; color: var(--leaf); box-shadow: 0 8px 20px -6px rgba(0,0,0,0.15); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -8px rgba(0,0,0,0.2); }
+    .btn-outline-light { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.4); }
+    .btn-outline-light:hover { background: white; color: var(--leaf); border-color: white; }
 
-    /* ── Buttons ── */
-    .btn-primary { display:inline-flex; align-items:center; justify-content:center; gap: 8px; background:#22c55e; color:white; padding: 14px 28px; border-radius: 999px; font-weight:700; font-size:13px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.25s cubic-bezier(0.4,0,0.2,1); box-shadow: 0 10px 30px -8px rgba(34,197,94,0.55); }
-    .btn-primary:hover { background:#16a34a; transform: translateY(-2px); box-shadow: 0 14px 36px -8px rgba(34,197,94,0.7); }
-    .btn-navy { display:inline-flex; align-items:center; justify-content:center; gap: 8px; background:#15803d; color:white; padding: 14px 28px; border-radius: 999px; font-weight:700; font-size:13px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.25s ease; }
-    .btn-navy:hover { background:#166534; transform: translateY(-2px); }
-    .btn-white { display:inline-flex; align-items:center; justify-content:center; gap: 8px; background:white; color:#15803d; padding: 14px 28px; border-radius: 999px; font-weight:700; font-size:13px; letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.25s ease; }
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.15); }
-    .btn-outline-light { display:inline-flex; align-items:center; justify-content:center; gap: 8px; background:transparent; color:white; padding: 13px 28px; border-radius: 999px; font-weight:700; font-size:13px; letter-spacing: 0.08em; text-transform: uppercase; border: 1.5px solid rgba(255,255,255,0.45); transition: all 0.25s ease; }
-    .btn-outline-light:hover { background: white; color: #15803d; border-color: white; }
+    /* ═══ SECTION LABEL ═══ */
+    .section-label { display:inline-flex; align-items:center; gap: 10px; color: var(--leaf-500); font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .section-label::before { content:''; width: 24px; height: 2px; background: linear-gradient(90deg, var(--leaf-500), var(--vapor)); border-radius: 2px; }
+    .section-label.light { color: #b3e9c6; }
+    .section-label.light::before { background: linear-gradient(90deg, #b3e9c6, #8fbcf7); }
 
-    /* ── Scroll reveal ── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    /* ═══ REVEAL ═══ */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal-left { opacity: 0; transform: translateX(-32px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
     .reveal-left.visible { opacity: 1; transform: translateX(0); }
-    .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal-right { opacity: 0; transform: translateX(32px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
     .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .reveal-stagger { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal-stagger.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── Service card v2 ── */
-    .service-card-v2 { background:white; border-radius: 16px; padding: 28px 24px 32px; transition: all 0.4s cubic-bezier(0.23,1,0.32,1); border: 1px solid #e2e8f0; position: relative; overflow: hidden; }
-    .service-card-v2:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -20px rgba(21,128,61,0.22); border-color: #86efac; }
-    .service-card-v2 .icon-wrap { width: 56px; height: 56px; border-radius: 12px; background: #f0fdf4; color: #22c55e; display:flex; align-items:center; justify-content:center; margin-bottom: 18px; transition: all 0.3s ease; }
-    .service-card-v2:hover .icon-wrap { background: #22c55e; color: white; transform: rotate(-6deg) scale(1.05); }
-    .service-card-v2.cta-card { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color: white; }
-    .service-card-v2.cta-card h3, .service-card-v2.cta-card p { color: white; }
+    /* ═══ LOGO ANIMATION (feuille qui frémit) ═══ */
+    .logo-navbar { transform-origin: center; transition: transform .3s ease; }
+    .logo-navbar:hover { transform: scale(1.04); }
 
-    /* ── Quick info bande ── */
-    .quick-card { padding: 26px 28px; border-radius: 18px; display:flex; align-items:center; gap: 20px; transition: all 0.3s ease; }
-    .quick-card.white { background:white; color:#15803d; box-shadow: 0 20px 40px -24px rgba(21,128,61,0.2); border: 1px solid #e2e8f0; }
-    .quick-card.orange { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); color:white; box-shadow: 0 20px 40px -14px rgba(34,197,94,0.55); }
-
-    /* ── Process step ── */
-    .process-circle { width: 96px; height: 96px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 2px solid rgba(34,197,94,0.6); color: #22c55e; display:flex; align-items:center; justify-content:center; transition: all 0.4s ease; }
-    .process-card-v2:hover .process-circle { background: #22c55e; color: white; border-color: #22c55e; transform: scale(1.08); }
-
-    /* ── Form fields ── */
-    .form-label { display:block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.95); margin-bottom: 8px; font-family: 'Inter', sans-serif; }
-    .form-field { width:100%; background: white; border: 1px solid #e2e8f0; color: #15803d; padding: 13px 16px; border-radius: 10px; font-size: 14px; transition: all 0.25s ease; font-family: 'Inter', sans-serif; }
-    .form-field::placeholder { color: #94a3b8; opacity: 1; }
-    .form-field:focus { outline: none; border-color: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,0.12); }
-
-    /* ── Floating CTA ── */
-    .float-cta { animation: pulseRing 2.4s ease-in-out infinite; }
-    @keyframes pulseRing {
-      0%, 100% { box-shadow: 0 6px 24px rgba(34,197,94,0.45), 0 0 0 0 rgba(34,197,94,0.45); }
-      50% { box-shadow: 0 6px 24px rgba(34,197,94,0.55), 0 0 0 12px rgba(34,197,94,0); }
+    /* ═══ VAPEUR — particules animées ═══ */
+    .vapor-field { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .vapor-particle {
+      position: absolute; bottom: -40px; width: 40px; height: 40px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.25) 40%, transparent 70%);
+      filter: blur(8px);
+      animation: rise 7s ease-in infinite;
+      opacity: 0;
+    }
+    @keyframes rise {
+      0%   { transform: translate(0, 0) scale(0.5); opacity: 0; }
+      15%  { opacity: 0.9; }
+      60%  { opacity: 0.7; }
+      100% { transform: translate(var(--dx, 20px), -100vh) scale(2.5); opacity: 0; }
     }
 
-    /* ── Marques / Partenaires ── */
+    /* ═══ PLACEHOLDERS (remplacent les photos hors-sujet) ═══ */
+    .photo-placeholder {
+      position: relative;
+      background:
+        repeating-linear-gradient(135deg, rgba(21,107,60,0.06) 0, rgba(21,107,60,0.06) 1px, transparent 1px, transparent 14px),
+        linear-gradient(160deg, #e8efe9 0%, #dbe4dd 100%);
+      border: 1px dashed rgba(21,107,60,0.35);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .photo-placeholder.dark {
+      background:
+        repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 14px),
+        linear-gradient(160deg, #0f3b68 0%, #072418 100%);
+      border: 1px dashed rgba(143,188,247,0.35);
+    }
+    .photo-placeholder .ph-inner {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.02em;
+      color: rgba(21,107,60,0.75);
+      padding: 12px 18px;
+      text-align: center;
+      max-width: 80%;
+      text-transform: none;
+      line-height: 1.5;
+    }
+    .photo-placeholder.dark .ph-inner { color: rgba(143,188,247,0.85); }
+    .photo-placeholder .ph-tag {
+      display: inline-block; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;
+      background: rgba(21,107,60,0.14); color: var(--leaf);
+    }
+    .photo-placeholder.dark .ph-tag { background: rgba(143,188,247,0.15); color: #bbd7fc; }
+    .photo-placeholder .ph-icon { opacity: 0.35; margin-bottom: 10px; display: flex; justify-content: center; }
+
+    /* ═══ SERVICE CARD ═══ */
+    .service-card { background: white; border-radius: 20px; padding: 28px 24px; border: 1px solid #eef2f0; position: relative; transition: all .35s cubic-bezier(.23,1,.32,1); overflow: hidden; }
+    .service-card::before {
+      content: ''; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+      background: linear-gradient(90deg, var(--leaf-500), var(--vapor));
+      transform: scaleX(0); transform-origin: left; transition: transform .45s cubic-bezier(.4,0,.2,1);
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 30px 50px -20px rgba(15,59,104,0.18); border-color: #d9f4e1; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-card .icon-wrap {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, #f0fbf4 0%, #dbeafe 100%);
+      color: var(--leaf); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; transition: all .35s ease;
+    }
+    .service-card:hover .icon-wrap {
+      background: linear-gradient(135deg, #156b3c 0%, #1a6cc2 100%); color: white;
+      transform: rotate(-6deg) scale(1.08);
+    }
+    .service-card.cta {
+      background: linear-gradient(135deg, #156b3c 0%, #115432 40%, #124781 100%); color: white; border: none;
+    }
+    .service-card.cta h3, .service-card.cta p { color: white; }
+    .service-card.cta .icon-wrap { background: rgba(255,255,255,0.18); color: white; }
+    .service-card .num-wm {
+      position: absolute; right: 18px; bottom: 10px; font-family: 'Baloo 2', sans-serif;
+      font-size: 56px; font-weight: 800; color: rgba(21,107,60,0.06); line-height: 1;
+      pointer-events: none;
+    }
+    .service-card.cta .num-wm { color: rgba(255,255,255,0.1); }
+
+    /* ═══ VIDEO-LIKE SCENE ═══ */
+    .scene {
+      position: relative; border-radius: 28px; overflow: hidden;
+      aspect-ratio: 16/9;
+      background: linear-gradient(180deg, #0a2447 0%, #124781 35%, #0d3f27 100%);
+      box-shadow: 0 40px 80px -30px rgba(15,59,104,0.45);
+    }
+    .scene-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+    /* Camera track: slow pan on the whole svg */
+    .scene-cam { animation: cam-pan 12s ease-in-out infinite; transform-origin: center; }
+    @keyframes cam-pan {
+      0%,100% { transform: translateX(0) scale(1); }
+      50%     { transform: translateX(-30px) scale(1.04); }
+    }
+
+    /* Nozzle trajectory: left → right over the tile field */
+    .nozzle-rig { animation: nozzle-sweep 8s ease-in-out infinite; }
+    @keyframes nozzle-sweep {
+      0%   { transform: translate(-40px, 40px); }
+      50%  { transform: translate(900px, -20px); }
+      100% { transform: translate(-40px, 40px); }
+    }
+    .nozzle-rig.mirror { animation: nozzle-sweep-mirror 8s ease-in-out infinite; }
+    @keyframes nozzle-sweep-mirror {
+      0%   { transform: translate(-40px, 40px) scaleX(1); }
+      49%  { transform: translate(900px, -20px) scaleX(1); }
+      51%  { transform: translate(900px, -20px) scaleX(-1); }
+      100% { transform: translate(-40px, 40px) scaleX(-1); }
+    }
+
+    /* Volumetric steam clouds - large, soft, rising */
+    .steam-cloud {
+      transform-origin: center;
+      animation: steam-rise 3.2s ease-out infinite;
+      opacity: 0;
+      filter: blur(2px);
+    }
+    @keyframes steam-rise {
+      0%   { transform: translate(0, 0) scale(0.4); opacity: 0; }
+      20%  { opacity: 0.95; }
+      60%  { opacity: 0.7; }
+      100% { transform: translate(var(--sx, 40px), var(--sy, -140px)) scale(2.6); opacity: 0; }
+    }
+
+    /* Moss reveal: use a moving circular mask so tiles appear "cleaned" along nozzle path */
+    .moss-layer { mask: url(#clean-mask); -webkit-mask: url(#clean-mask); }
+    .clean-circle { animation: clean-sweep 8s ease-in-out infinite; }
+    @keyframes clean-sweep {
+      0%,10% { r: 0px; cx: 80px; cy: 400px; }
+      50%    { cx: 1020px; cy: 340px; }
+      90%,100% { r: 0px; cx: 1020px; cy: 340px; }
+      /* mid phase the radius grows to reveal tiles */
+    }
+
+    /* Revealed-tile highlight that follows nozzle */
+    .shine-path { animation: shine-trail 8s ease-in-out infinite; }
+    @keyframes shine-trail {
+      0%,100% { opacity: 0; transform: translate(-40px, 40px); }
+      10%, 90% { opacity: 1; }
+      50%    { transform: translate(900px, -20px); }
+    }
+
+    /* Worker silhouette gentle breathing */
+    .worker { animation: worker-idle 3s ease-in-out infinite; transform-origin: bottom center; }
+    @keyframes worker-idle {
+      0%,100% { transform: scaleY(1); }
+      50%     { transform: scaleY(1.015); }
+    }
+
+    /* Water droplets falling off */
+    .drop { animation: drop-fall 2.4s linear infinite; opacity: 0; }
+    @keyframes drop-fall {
+      0%   { transform: translateY(0); opacity: 0; }
+      20%  { opacity: 0.9; }
+      100% { transform: translateY(200px); opacity: 0; }
+    }
+
+    /* Corner HUD badges */
+    .hud-badge {
+      position: absolute; z-index: 2;
+      padding: 8px 14px; border-radius: 999px;
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: white; font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; letter-spacing: 0.08em;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .hud-rec::before {
+      content:''; width: 7px; height: 7px; border-radius: 50%;
+      background: #ef4444;
+      animation: rec-pulse 1.2s ease-in-out infinite;
+    }
+    @keyframes rec-pulse { 50% { opacity: 0.3; } }
+
+    /* Progress bar at bottom */
+    .scene-progress {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+      background: rgba(255,255,255,0.1); z-index: 2;
+    }
+    .scene-progress::after {
+      content:''; display: block; height: 100%;
+      background: linear-gradient(90deg, #2ea35e, #1a6cc2);
+      animation: scene-prog 8s ease-in-out infinite;
+    }
+    @keyframes scene-prog {
+      0%   { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    /* Timeline pill row (under scene) */
+    .beat-row { display: flex; gap: 12px; margin-top: 16px; }
+    .beat {
+      flex: 1; padding: 10px 14px; border-radius: 12px;
+      background: white; border: 1px solid #eef2f0;
+      font-size: 12px; color: var(--ink);
+      display: flex; align-items: center; gap: 10px;
+      transition: all .3s ease;
+    }
+    .beat.active { background: linear-gradient(135deg, #156b3c, #1a6cc2); color: white; border-color: transparent; box-shadow: 0 10px 24px -10px rgba(26,108,194,0.45); }
+    .beat-dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; opacity: 0.6; }
+    .beat.active .beat-dot { opacity: 1; }
+
+    @keyframes beat-cycle { 0%,25% { background: linear-gradient(135deg, #156b3c, #1a6cc2); color: white; } 30%,100% { background: white; color: var(--ink); } }
+
+    /* ═══ STEP CHIPS sous la démo ═══ */
+    .step-chip {
+      display: flex; align-items: center; gap: 14px;
+      padding: 18px 20px; border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all .3s ease;
+    }
+    .step-chip:hover { background: rgba(255,255,255,0.07); border-color: rgba(143,188,247,0.3); }
+    .step-chip .step-num {
+      flex-shrink: 0; width: 36px; height: 36px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--leaf-500), var(--vapor));
+      color: white; display: flex; align-items: center; justify-content: center;
+      font-family: 'Baloo 2', sans-serif; font-weight: 800; font-size: 15px;
+    }
+
+    /* ═══ AVANT / APRÈS ═══ */
+    .ba-slider { position: relative; width: 100%; overflow: hidden; border-radius: 24px; user-select: none; box-shadow: 0 30px 60px -20px rgba(15,59,104,0.3); }
+    .ba-slider img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+    .ba-after, .ba-before { position: absolute; inset: 0; }
+    .ba-before { clip-path: inset(0 50% 0 0); }
+    .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: white; transform: translateX(-50%); cursor: ew-resize; z-index: 5; box-shadow: 0 0 20px rgba(0,0,0,0.25); }
+    .ba-handle-circle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 52px; height: 52px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; color: var(--leaf); box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
+    .ba-label { position: absolute; top: 16px; padding: 6px 14px; border-radius: 999px; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; backdrop-filter: blur(6px); z-index: 4; }
+    .ba-label.before { left: 16px; background: rgba(15,20,17,0.75); color: white; }
+    .ba-label.after { right: 16px; background: rgba(21,107,60,0.9); color: white; }
+
+    /* ═══ QUICK-INFO BANDE ═══ */
+    .quick-card { padding: 26px 28px; border-radius: 20px; display: flex; align-items: center; gap: 20px; transition: all .3s ease; }
+    .quick-card.white { background: white; color: var(--leaf); box-shadow: 0 20px 40px -24px rgba(15,59,104,0.2); border: 1px solid #eef2f0; }
+    .quick-card.gradient { background: linear-gradient(135deg, #156b3c 0%, #1a6cc2 100%); color: white; box-shadow: 0 24px 44px -14px rgba(26,108,194,0.45); }
+
+    /* ═══ TESTIMONIALS ═══ */
+    .avis-card { background: white; border-radius: 20px; padding: 28px; border: 1px solid #eef2f0; transition: all .3s ease; }
+    .avis-card:hover { transform: translateY(-4px); box-shadow: 0 24px 40px -20px rgba(15,59,104,0.18); border-color: #d9f4e1; }
+    .star { color: #f5b728; }
+
+    /* ═══ PARTENAIRES MARQUEE ═══ */
     .partners-marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); }
-    .partners-track { display: flex; gap: 48px; animation: partners-scroll 36s linear infinite; width: max-content; }
+    .partners-track { display: flex; gap: 36px; animation: partners-scroll 40s linear infinite; width: max-content; }
     @keyframes partners-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .partner-card { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; height: 88px; min-width: 200px; padding: 0 36px; border-radius: 18px; background: white; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
-    .partner-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -18px rgba(22,163,74,0.35); border-color: #bbf7d0; }
-    .brand-wm { font-family: 'Baloo 2', 'Arial Black', sans-serif; font-weight: 900; font-size: 28px; letter-spacing: -0.02em; white-space: nowrap; line-height: 1; transition: transform 0.3s ease; }
-    .partner-card:hover .brand-wm { transform: scale(1.04); }
+    .partner-card {
+      flex: 0 0 auto; display: flex; align-items: center; justify-content: center;
+      height: 84px; min-width: 210px; padding: 0 32px; border-radius: 16px;
+      background: white; border: 1px solid #eef2f0;
+      transition: all .35s cubic-bezier(.4,0,.2,1);
+    }
+    .partner-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -18px rgba(15,59,104,0.2); border-color: #d9f4e1; }
+    .brand-wm { font-family: 'Baloo 2', 'Arial Black', sans-serif; font-weight: 900; font-size: 26px; letter-spacing: -0.02em; white-space: nowrap; line-height: 1; }
     .brand-karcher   { color: #000; font-style: italic; }
     .brand-karcher .ac { color: #ffc72c; }
     .brand-sika      { color: #d7262c; letter-spacing: 0.1em; }
-    .brand-sikkens   { color: #005faa; font-family: 'Georgia', serif; font-weight: 900; font-style: italic; letter-spacing: 0.01em; }
+    .brand-sikkens   { color: #005faa; font-family: 'Georgia', serif; font-weight: 900; font-style: italic; }
     .brand-algimouss { color: #2e7d32; }
     .brand-algimouss .leaf { color: #8bc34a; }
-    .brand-owatrol   { color: #0b2a4a; text-transform: uppercase; font-size: 24px; letter-spacing: 0.12em; }
-    .brand-guard     { color: #003c71; text-transform: uppercase; font-size: 22px; letter-spacing: 0.08em; }
+    .brand-owatrol   { color: #0b2a4a; text-transform: uppercase; font-size: 22px; letter-spacing: 0.12em; }
+    .brand-guard     { color: #003c71; text-transform: uppercase; font-size: 20px; letter-spacing: 0.08em; }
     .brand-guard .em { color: #d7262c; }
-    .brand-rubson    { color: #ffd100; background: #1a1a1a; padding: 6px 18px; border-radius: 6px; letter-spacing: 0.04em; }
-    /* Premium icon badges (gradient brand→accent) */
-    .icon-badge-premium { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 60%, #1a6cc2 100%); box-shadow: 0 10px 24px -8px rgba(22,163,74,0.5), inset 0 1px 0 rgba(255,255,255,0.25); color: white; }
-    .icon-badge-premium::after { content:''; position: absolute; inset: 0; border-radius: 16px; background: linear-gradient(135deg, rgba(255,255,255,0.35), transparent 50%); pointer-events: none; }
-    .icon-badge-premium i { position: relative; z-index: 1; }
+    .brand-rubson    { color: #ffd100; background: #1a1a1a; padding: 6px 16px; border-radius: 6px; }
 
-    /* ── Topbar ── */
-    .topbar { background: #0a2e17; color: #bbf7d0; font-size: 12px; letter-spacing: 0.08em; }
+    /* ═══ FORM ═══ */
+    .form-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.95); margin-bottom: 8px; }
+    .form-field { width: 100%; background: white; border: 1px solid transparent; color: var(--leaf); padding: 13px 16px; border-radius: 12px; font-size: 14px; transition: all .25s ease; font-family: 'Inter', sans-serif; }
+    .form-field::placeholder { color: #8a9a8f; }
+    .form-field:focus { outline: none; border-color: var(--vapor); box-shadow: 0 0 0 4px rgba(26,108,194,0.18); }
 
-    /* ── Hero badge ── */
-    .hero-badge { display:inline-flex; align-items:center; gap:10px; padding: 8px 18px; background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.45); color: #86efac; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; border-radius: 999px; backdrop-filter: blur(6px); }
-
-    /* ── Zone communes list ── */
-    .zone-item { display:flex; align-items:center; gap: 8px; padding: 6px 0; color: rgba(255,255,255,0.78); font-size: 14px; transition: color 0.2s ease; }
-    .zone-item:hover { color: #86efac; }
-
-    /* ── Process line ── */
-    .process-steps-wrapper { position: relative; }
-    .process-steps-wrapper::before {
-      content:'';
-      position: absolute;
-      left: 48px;
-      right: 48px;
-      top: 48px;
-      height: 2px;
-      background-image: radial-gradient(circle, rgba(34,197,94,0.5) 2px, transparent 2px);
-      background-size: 14px 2px;
-      background-repeat: repeat-x;
-      z-index: 0;
+    /* ═══ FLOATING CTA ═══ */
+    .float-cta { animation: pulseRing 2.6s ease-in-out infinite; }
+    @keyframes pulseRing {
+      0%,100% { box-shadow: 0 6px 24px rgba(26,108,194,0.45), 0 0 0 0 rgba(26,108,194,0.4); }
+      50%     { box-shadow: 0 6px 24px rgba(26,108,194,0.55), 0 0 0 14px rgba(26,108,194,0); }
     }
-    @media (max-width: 768px) { .process-steps-wrapper::before { display:none; } }
-    /* Nav dropdowns (inline for robustness) */
-    .nav-dropdown { position:relative; }
-    .nav-dropdown-btn { display:inline-flex; align-items:center; gap:6px; cursor:pointer; background:none; border:none; font-family:'Baloo 2',sans-serif; color:inherit; }
-    .nav-dropdown::after { content:''; position:absolute; left:0; right:0; top:100%; height:18px; }
-    .nav-dropdown-menu { position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(8px); margin-top:14px; width:280px; background:#fff; border-radius:16px; box-shadow:0 25px 60px -20px rgba(15,23,42,.22), 0 0 0 1px rgba(15,23,42,.06); padding:10px; opacity:0; pointer-events:none; transition:opacity .22s ease, transform .22s ease; z-index:60; }
-    .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { opacity:1; transform:translateX(-50%) translateY(0); pointer-events:auto; }
-    .nav-dropdown-item { display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:10px; color:#1e293b; font-size:13px; font-weight:600; text-decoration:none; }
-    .nav-dropdown-item:hover { background:#eff6ff; color:#15803d; }
-    .nav-dropdown-item-icon { flex-shrink:0; width:36px; height:36px; border-radius:10px; background:#eff6ff; color:#22c55e; display:flex; align-items:center; justify-content:center; }
-    .mobile-nav-group { border-radius:10px; overflow:hidden; }
-    .mobile-nav-group-title { display:flex; align-items:center; justify-content:space-between; width:100%; padding:12px 16px; background:none; border:none; font-family:'Baloo 2',sans-serif; color:#334155; font-size:14px; font-weight:600; cursor:pointer; }
-    .mobile-nav-group-items { display:none; padding:4px 0 8px 16px; }
-    .mobile-nav-group.open .mobile-nav-group-items { display:block; }
-    .mobile-nav-group-items a { display:block; padding:10px 14px; border-radius:8px; font-size:13px; color:#475569; font-weight:500; text-decoration:none; }
+
+    /* ═══ BADGE "100% ÉCO" ANIMATED ═══ */
+    .eco-badge-ring {
+      animation: spin-slow 18s linear infinite;
+    }
+    @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+    /* ═══ TOPBAR ═══ */
+    .topbar { background: linear-gradient(90deg, #0d3f27 0%, #0a2447 100%); color: #d9f4e1; font-size: 12px; letter-spacing: 0.08em; }
+
+    /* ═══ ZONE COMMUNES ═══ */
+    .zone-item { display: flex; align-items: center; gap: 10px; padding: 6px 0; color: rgba(255,255,255,0.8); font-size: 14px; transition: color .2s ease; }
+    .zone-item:hover { color: #bbd7fc; }
+
+    /* ═══ SCROLLBAR ═══ */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f7f9f8; }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2ea35e, #1a6cc2); border-radius: 10px; }
   </style>
 </head>
 <body>
@@ -240,10 +442,10 @@
 ════════════════════════════════════════════════════════════ -->
 <div class="topbar hidden md:block">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-9">
-    <span class="uppercase tracking-widest text-xs">Nettoyage écologique de toiture à la vapeur · Landes (40) & Pyrénées-Atlantiques (64) · Devis gratuit</span>
-    <div class="flex items-center gap-5 text-xs">
-      <a href="tel:0602020301" class="flex items-center gap-2 hover:text-white"><i data-lucide="phone" class="w-3 h-3"></i> 06 02 02 03 01</a>
-      <a href="mailto:ecovaptoiture@gmail.com" class="flex items-center gap-2 hover:text-white"><i data-lucide="mail" class="w-3 h-3"></i> ecovaptoiture@gmail.com</a>
+    <span class="uppercase tracking-widest text-[11px]">Nettoyage écologique de toiture à la vapeur · Landes (40) & Pyrénées-Atlantiques (64)</span>
+    <div class="flex items-center gap-6 text-[11px]">
+      <a href="tel:0602020301" class="flex items-center gap-2 hover:text-white transition"><i data-lucide="phone" class="w-3 h-3"></i> 06 02 02 03 01</a>
+      <a href="mailto:ecovaptoiture@gmail.com" class="flex items-center gap-2 hover:text-white transition"><i data-lucide="mail" class="w-3 h-3"></i> ecovaptoiture@gmail.com</a>
     </div>
   </div>
 </div>
@@ -251,14 +453,14 @@
 <!-- ═══════════════════════════════════════════════════════════
      NAVBAR
 ════════════════════════════════════════════════════════════ -->
-<nav id="navbar" class="sticky top-0 left-0 right-0 z-50 bg-white border-b border-ink-100">
+<nav id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-ink-100 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-28">
-      <a href="index.html" class="flex items-center gap-2" aria-label="Ecovaptoiture — Accueil">
-        <img src="assets/img/logo-ecovap.png" alt="Ecovaptoiture" class="h-20 md:h-28 w-auto logo-navbar" />
+    <div class="flex items-center justify-between h-24">
+      <a href="index-v2.html" class="flex items-center gap-2" aria-label="Ecovaptoiture">
+        <img src="assets/img/logo-ecovap.png" alt="Ecovaptoiture" class="h-20 md:h-24 w-auto logo-navbar" />
       </a>
-      <div class="hidden lg:flex items-center gap-8">
-        <a href="index.html" class="nav-link">Accueil</a>
+      <div class="hidden lg:flex items-center gap-10">
+        <a href="index-v2.html" class="nav-link active">Accueil</a>
         <a href="nettoyage-toiture.html" class="nav-link">Nettoyage toiture</a>
         <a href="gouttieres.html" class="nav-link">Gouttières</a>
         <a href="hydrofuge.html" class="nav-link">Hydrofuge</a>
@@ -266,9 +468,8 @@
         <a href="contact.html" class="nav-link">Contact</a>
       </div>
       <div class="flex items-center gap-3">
-        <a href="contact.html" class="hidden sm:inline-flex btn-primary btn-magnetic">
-          <i data-lucide="leaf" class="w-4 h-4"></i>
-          Devis gratuit
+        <a href="#devis" class="hidden sm:inline-flex btn btn-primary">
+          <i data-lucide="leaf" class="w-4 h-4"></i> Devis gratuit
         </a>
         <button id="burger-btn" class="lg:hidden p-2 rounded-lg text-ink-800" aria-label="Menu">
           <i id="burger-icon" data-lucide="menu" class="w-7 h-7"></i>
@@ -277,103 +478,158 @@
       </div>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-ink-100">
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-ink-100 bg-white">
     <div class="px-4 py-4 space-y-1">
-      <a href="index.html" class="block px-4 py-3 rounded-lg text-ink-700 hover:bg-ink-50 font-medium text-sm">Accueil</a>
-      <a href="nettoyage-toiture.html" class="block px-4 py-3 rounded-lg text-ink-700 hover:bg-ink-50 font-medium text-sm">Nettoyage toiture</a>
-      <a href="gouttieres.html" class="block px-4 py-3 rounded-lg text-ink-700 hover:bg-ink-50 font-medium text-sm">Gouttières</a>
-      <a href="hydrofuge.html" class="block px-4 py-3 rounded-lg text-ink-700 hover:bg-ink-50 font-medium text-sm">Hydrofuge</a>
-      <a href="a-propos.html" class="block px-4 py-3 rounded-lg text-ink-700 hover:bg-ink-50 font-medium text-sm">À propos</a>
-      <a href="contact.html" class="block px-4 py-3 rounded-lg text-ink-700 hover:bg-ink-50 font-medium text-sm">Contact</a>
-      <a href="contact.html" class="block text-center mt-3 btn-primary w-full btn-magnetic">Devis gratuit</a>
+      <a href="index-v2.html" class="block px-4 py-3 rounded-lg font-medium text-sm text-ink-700 hover:bg-ink-50">Accueil</a>
+      <a href="nettoyage-toiture.html" class="block px-4 py-3 rounded-lg font-medium text-sm text-ink-700 hover:bg-ink-50">Nettoyage toiture</a>
+      <a href="gouttieres.html" class="block px-4 py-3 rounded-lg font-medium text-sm text-ink-700 hover:bg-ink-50">Gouttières</a>
+      <a href="hydrofuge.html" class="block px-4 py-3 rounded-lg font-medium text-sm text-ink-700 hover:bg-ink-50">Hydrofuge</a>
+      <a href="a-propos.html" class="block px-4 py-3 rounded-lg font-medium text-sm text-ink-700 hover:bg-ink-50">À propos</a>
+      <a href="contact.html" class="block px-4 py-3 rounded-lg font-medium text-sm text-ink-700 hover:bg-ink-50">Contact</a>
+      <a href="#devis" class="block text-center mt-3 btn btn-primary w-full">Devis gratuit</a>
     </div>
   </div>
 </nav>
 
 <!-- ═══════════════════════════════════════════════════════════
-     HERO — navy + gradient-mesh (edge-to-edge image)
+     HERO — dégradé vert→bleu du logo + particules vapeur
 ════════════════════════════════════════════════════════════ -->
-<section id="hero" class="relative overflow-hidden" style="background:#15803d;">
-  <div class="gradient-mesh"></div>
-  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch min-h-[560px] lg:min-h-[640px]">
+<section id="hero" class="relative overflow-hidden" style="background: linear-gradient(135deg, #0d3f27 0%, #115432 30%, #124781 70%, #0f3b68 100%);">
+  <!-- Subtile texture -->
+  <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 32px 32px;"></div>
 
-    <!-- Colonne texte : 7/12 desktop -->
-    <div class="lg:col-span-7 flex items-center">
-      <div class="w-full max-w-3xl ml-auto px-4 sm:px-6 lg:pl-8 lg:pr-12 py-20 lg:py-28">
-        <div class="hero-badge reveal">
-          <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
-          Nettoyage écologique à la vapeur
-        </div>
-        <h1 class="font-heading font-bold text-white text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] tracking-tight mt-6 mb-6 reveal">
-          Le nettoyage écologique<br />
-          <span class="text-shimmer-orange">de toiture</span>
-        </h1>
-        <p class="text-white/80 text-lg sm:text-xl font-light mb-8 max-w-xl reveal">
-          Mousses, lichens, toiture encrassée ? Nettoyage vapeur écologique sans produit chimique ni haute pression. Devis gratuit.</p>
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 reveal">
-          <a href="tel:0602020301" class="btn-primary btn-magnetic">
-            <i data-lucide="phone" class="w-4 h-4"></i>
-            Appelez-nous : 06 02 02 03 01
-          </a>
-          <a href="#devis" class="btn-outline-light btn-magnetic">
-            Demander un devis
-          </a>
-        </div>
-        <div class="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/70 reveal">
-          <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500"></i> 100% écologique</div>
-          <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500"></i> Devis gratuit sous 48h</div>
-          <div class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent-500"></i> Sans produit chimique</div>
-        </div>
-      </div>
-    </div>
+  <!-- Particules vapeur -->
+  <div class="vapor-field" id="vapor-field"></div>
 
-    <!-- Colonne image edge-to-edge : 5/12 desktop -->
-    <div class="lg:col-span-5 relative min-h-[440px] lg:min-h-full reveal-right">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=90&auto=format&fit=crop"
-           alt="Nettoyage vapeur écologique de toiture — procédé Ecovaptoiture"
-           class="absolute inset-0 w-full h-full object-cover" loading="eager" />
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-900/70"></div>
-      <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-900/70 to-transparent hidden lg:block"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-      <!-- Badge tech flottant -->
-      <div class="absolute bottom-8 right-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-5 max-w-[260px] hidden sm:block reveal">
-        <div class="flex items-center gap-3 mb-2">
-          <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center shrink-0">
-            <i data-lucide="droplets" class="w-5 h-5 text-white"></i>
+      <!-- Colonne texte -->
+      <div class="lg:col-span-7">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white text-[11px] font-bold tracking-[0.2em] uppercase">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-leaf-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-leaf-400"></span>
+            </span>
+            Nettoyage 100% écologique
           </div>
-          <div class="font-heading font-bold text-brand-900 leading-tight">Vapeur basse pression</div>
         </div>
-        <p class="text-xs text-ink-600 leading-snug">Technologie exclusive qui élimine mousses et lichens sans altérer vos matériaux.</p>
-      </div>
-    </div>
 
+        <h1 class="font-heading font-bold text-white text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[0.98] tracking-tight mt-6 mb-6 reveal">
+          Votre toiture,<br/>
+          nettoyée à la <span class="relative inline-block">
+            <span style="background: linear-gradient(95deg, #7fd79f 0%, #bbd7fc 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">vapeur.</span>
+            <svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 300 10" fill="none">
+              <path d="M2 6 Q 75 2, 150 6 T 298 6" stroke="url(#und)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <defs>
+                <linearGradient id="und" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#7fd79f"/>
+                  <stop offset="100%" stop-color="#bbd7fc"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+        </h1>
+
+        <p class="text-white/80 text-lg sm:text-xl font-light mb-8 max-w-xl reveal leading-relaxed">
+          Mousses, lichens, toiture encrassée ? La vapeur basse pression élimine tout en profondeur — <span class="text-white font-medium">sans produit chimique</span>, <span class="text-white font-medium">sans haute pression</span>, sans abîmer vos matériaux.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 reveal">
+          <a href="tel:0602020301" class="btn btn-primary">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            06 02 02 03 01
+          </a>
+          <a href="#devis" class="btn btn-outline-light">
+            Devis gratuit sous 48h
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/70 reveal">
+          <div class="flex items-center gap-2"><i data-lucide="leaf" class="w-4 h-4 text-leaf-400"></i> 100% écologique</div>
+          <div class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-vapor-300"></i> Garantie 10 ans</div>
+          <div class="flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 text-leaf-400"></i> Devis 48h</div>
+        </div>
+      </div>
+
+      <!-- Colonne visuel hero -->
+      <div class="lg:col-span-5 relative reveal-right">
+        <!-- Placeholder photo hero : vrai métier -->
+        <div class="photo-placeholder aspect-[4/5] rounded-3xl shadow-2xl">
+          <div class="ph-inner">
+            <div class="ph-tag">PHOTO HERO</div>
+            <div class="ph-icon">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21 L12 3 L21 21 M6 15 L18 15"/><circle cx="9" cy="18" r="1.2"/><circle cx="15" cy="18" r="1.2"/></svg>
+            </div>
+            <strong style="display:block; font-family:'Inter', sans-serif; font-size:14px; font-weight:700; margin-bottom:6px; color: #115432;">Plan large · technicien sur toiture</strong>
+            Nettoyeur en tenue Ecovap,<br/>
+            canne vapeur en action,<br/>
+            toiture à moitié nettoyée (bien visible)<br/>
+            <span style="opacity:.7;">(1200×1500 min · lumière naturelle)</span>
+          </div>
+        </div>
+
+        <!-- Badge tech flottant -->
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-5 max-w-[280px] hidden sm:block reveal" style="animation-delay:.3s;">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style="background: linear-gradient(135deg, #156b3c, #1a6cc2);">
+              <i data-lucide="droplets" class="w-6 h-6 text-white"></i>
+            </div>
+            <div>
+              <div class="font-heading font-bold text-leaf-700 leading-tight text-sm">Vapeur basse pression</div>
+              <div class="text-[10px] text-ink-500 uppercase tracking-widest">140°C · 0.3 bar</div>
+            </div>
+          </div>
+          <p class="text-[11px] text-ink-600 leading-snug">Mousses et lichens éliminés à la racine — sans altérer tuiles ni joints.</p>
+        </div>
+
+        <!-- Badge 100% éco ring animé en haut -->
+        <div class="absolute -top-4 -right-4 w-28 h-28 hidden md:flex items-center justify-center">
+          <svg class="absolute inset-0 w-full h-full eco-badge-ring" viewBox="0 0 120 120">
+            <defs>
+              <path id="circle-path" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
+            </defs>
+            <text fill="white" font-family="Baloo 2, sans-serif" font-size="11" font-weight="700" letter-spacing="2">
+              <textPath href="#circle-path">SANS PRODUIT CHIMIQUE · SANS HAUTE PRESSION · </textPath>
+            </text>
+          </svg>
+          <div class="relative w-14 h-14 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #2ea35e, #1a6cc2);">
+            <i data-lucide="leaf" class="w-7 h-7 text-white"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
+  <!-- Bord bas ondulé -->
+  <svg class="absolute bottom-0 left-0 w-full h-[60px] z-10" viewBox="0 0 1440 60" preserveAspectRatio="none" fill="#fafbfa">
+    <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z"/>
+  </svg>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     QUICK INFO BANDE — 2 cards qui chevauchent le hero
+     QUICK INFO BANDE
 ════════════════════════════════════════════════════════════ -->
-<section class="relative -mt-16 sm:-mt-20 z-20 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
-
-    <!-- Carte blanche avec badge SOS orange -->
+<section class="relative z-20 -mt-10 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
     <div class="quick-card white reveal relative" style="padding-top:34px;">
-      <!-- Badge SOS rond orange -->
-      <div class="absolute -top-4 left-6 w-10 h-10 rounded-full bg-accent-500 text-white flex items-center justify-center shadow-lg ring-4 ring-white">
+      <div class="absolute -top-4 left-6 w-10 h-10 rounded-full flex items-center justify-center shadow-lg ring-4 ring-white" style="background: linear-gradient(135deg, #2ea35e, #1a6cc2); color: white;">
         <i data-lucide="phone-call" class="w-5 h-5"></i>
       </div>
-      <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-brand-50 flex items-center justify-center text-brand-900">
-        <i data-lucide="tool-case" class="w-7 h-7"></i>
+      <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-leaf-50 flex items-center justify-center text-leaf-700">
+        <i data-lucide="home" class="w-7 h-7"></i>
       </div>
       <div>
-        <div class="font-heading font-bold text-lg leading-tight">Nettoyage, démoussage, hydrofuge</div>
-        <div class="text-ink-500 text-sm mt-1">Toitures, terrasses, bardages — le nettoyage vapeur écologique pour tous vos supports.</div>
+        <div class="font-heading font-bold text-lg leading-tight text-leaf-800">Toitures · Terrasses · Bardages</div>
+        <div class="text-ink-500 text-sm mt-1">Le nettoyage vapeur écologique pour tous vos supports extérieurs.</div>
       </div>
     </div>
 
-    <!-- Carte verte "devis" qui flotte / décalage vertical -->
-    <div class="quick-card orange reveal relative md:translate-y-6" style="padding-top:34px;">
-      <div class="absolute -top-4 left-6 w-10 h-10 rounded-full bg-white text-accent-500 flex items-center justify-center shadow-lg ring-4 ring-accent-500/20">
+    <div class="quick-card gradient reveal relative md:translate-y-4" style="padding-top:34px;">
+      <div class="absolute -top-4 left-6 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg" style="color:#1a6cc2;">
         <i data-lucide="leaf" class="w-5 h-5"></i>
       </div>
       <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-white/20 flex items-center justify-center">
@@ -381,197 +637,194 @@
       </div>
       <div>
         <div class="font-heading font-bold text-lg leading-tight">Devis gratuit sous 48h</div>
-        <div class="text-white/90 text-sm mt-1">Intervention dans les Landes (40) et le Pays Basque (64) — procédé 100% écologique</div>
+        <div class="text-white/90 text-sm mt-1">Landes (40) & Pyrénées-Atlantiques (64) — intervention sous 10 jours.</div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     SERVICES — grille 4×2
+     SERVICES
 ════════════════════════════════════════════════════════════ -->
 <section id="services" class="py-20 lg:py-28 bg-ink-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14 reveal">
-      <div class="section-label justify-center"><span></span>Nos services</div>
-      <h2 class="font-heading font-bold text-brand-900 text-3xl sm:text-4xl lg:text-5xl mb-4">Le nettoyage écologique<br class="hidden sm:block" /> pour tous vos supports</h2>
-      <p class="text-ink-500 max-w-2xl mx-auto text-base">
-        De la toiture encrassée à la terrasse noircie, Ecovaptoiture traite l'ensemble de vos surfaces extérieures à la vapeur basse pression — sans produit chimique, sans altération.
-      </p>
+      <div class="section-label justify-center">Nos services</div>
+      <h2 class="font-heading font-bold text-leaf-800 text-4xl sm:text-5xl mb-4 leading-tight">Un nettoyage sur-mesure<br class="hidden sm:block"/> <span class="text-gradient-logo">pour chaque support</span></h2>
+      <p class="text-ink-600 max-w-2xl mx-auto text-base">De la toiture encrassée à la terrasse noircie, Ecovaptoiture traite l'ensemble de vos surfaces extérieures à la vapeur basse pression.</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
-      <article class="service-card-v2 reveal-stagger">
-        <a href="nettoyage-toiture.html" class="absolute inset-0 z-10" aria-label="Nettoyage toiture"></a>
+      <a href="nettoyage-toiture.html" class="service-card reveal-stagger">
         <div class="icon-wrap"><i data-lucide="home" class="w-7 h-7"></i></div>
-        <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Nettoyage toiture</h3>
-        <p class="text-ink-500 text-sm leading-relaxed">Tuiles, ardoises, fibrociment, zinc : nettoyage vapeur basse pression sans casse ni micro-fissure.</p>
-        <span class="num-watermark">01</span>
-      </article>
+        <h3 class="font-heading font-bold text-leaf-800 text-lg mb-2">Nettoyage toiture</h3>
+        <p class="text-ink-500 text-sm leading-relaxed relative z-10">Tuiles, ardoises, fibrociment, zinc : vapeur basse pression sans casse.</p>
+        <span class="num-wm">01</span>
+      </a>
 
-      <article class="service-card-v2 reveal-stagger">
-        <a href="nettoyage-toiture.html#terrasses" class="absolute inset-0 z-10" aria-label="Nettoyage terrasse"></a>
+      <a href="nettoyage-toiture.html#terrasses" class="service-card reveal-stagger">
         <div class="icon-wrap"><i data-lucide="square" class="w-7 h-7"></i></div>
-        <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Nettoyage terrasse</h3>
-        <p class="text-ink-500 text-sm leading-relaxed">Bois, pierre, dalles béton : retrait des mousses et du noircissement sans décoloration.</p>
-        <span class="num-watermark">02</span>
-      </article>
+        <h3 class="font-heading font-bold text-leaf-800 text-lg mb-2">Nettoyage terrasse</h3>
+        <p class="text-ink-500 text-sm leading-relaxed relative z-10">Bois, pierre, dalles béton : retrait des mousses sans décoloration.</p>
+        <span class="num-wm">02</span>
+      </a>
 
-      <article class="service-card-v2 reveal-stagger">
-        <a href="nettoyage-toiture.html#bardages" class="absolute inset-0 z-10" aria-label="Bardages"></a>
+      <a href="nettoyage-toiture.html#bardages" class="service-card reveal-stagger">
         <div class="icon-wrap"><i data-lucide="layers" class="w-7 h-7"></i></div>
-        <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Bardages & façades</h3>
-        <p class="text-ink-500 text-sm leading-relaxed">Bois (mélèze, douglas, cedar), composite, PVC, fibrociment, crépi : remise à neuf en douceur.</p>
-        <span class="num-watermark">03</span>
-      </article>
+        <h3 class="font-heading font-bold text-leaf-800 text-lg mb-2">Bardages & façades</h3>
+        <p class="text-ink-500 text-sm leading-relaxed relative z-10">Bois, composite, PVC, fibrociment, crépi : remise à neuf en douceur.</p>
+        <span class="num-wm">03</span>
+      </a>
 
-      <article class="service-card-v2 reveal-stagger">
-        <a href="nettoyage-toiture.html#demoussage" class="absolute inset-0 z-10" aria-label="Démoussage"></a>
+      <a href="nettoyage-toiture.html#demoussage" class="service-card reveal-stagger">
         <div class="icon-wrap"><i data-lucide="leaf" class="w-7 h-7"></i></div>
-        <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Démoussage profond</h3>
-        <p class="text-ink-500 text-sm leading-relaxed">Toiture très encrassée : traitement biocide bio + vapeur. Prolonge la durée de vie de 10 à 15 ans.</p>
-        <span class="num-watermark">04</span>
-      </article>
+        <h3 class="font-heading font-bold text-leaf-800 text-lg mb-2">Démoussage profond</h3>
+        <p class="text-ink-500 text-sm leading-relaxed relative z-10">Traitement biocide éco + vapeur. Prolonge la toiture de 10 à 15 ans.</p>
+        <span class="num-wm">04</span>
+      </a>
 
-      <article class="service-card-v2 reveal-stagger">
-        <a href="hydrofuge.html#toiture" class="absolute inset-0 z-10" aria-label="Hydrofuge toiture"></a>
+      <a href="hydrofuge.html#toiture" class="service-card reveal-stagger">
         <div class="icon-wrap"><i data-lucide="shield" class="w-7 h-7"></i></div>
-        <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Hydrofuge toiture</h3>
-        <p class="text-ink-500 text-sm leading-relaxed">Protection microporeuse incolore ou colorée. Garantie jusqu'à 10 ans selon le support.</p>
-        <span class="num-watermark">05</span>
-      </article>
+        <h3 class="font-heading font-bold text-leaf-800 text-lg mb-2">Hydrofuge toiture</h3>
+        <p class="text-ink-500 text-sm leading-relaxed relative z-10">Protection microporeuse incolore ou colorée. Jusqu'à 10 ans.</p>
+        <span class="num-wm">05</span>
+      </a>
 
-      <article class="service-card-v2 reveal-stagger">
-        <a href="hydrofuge.html#facade" class="absolute inset-0 z-10" aria-label="Hydrofuge façade"></a>
+      <a href="hydrofuge.html#facade" class="service-card reveal-stagger">
         <div class="icon-wrap"><i data-lucide="building" class="w-7 h-7"></i></div>
-        <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Hydrofuge façade</h3>
-        <p class="text-ink-500 text-sm leading-relaxed">Imperméabilisation crépi, pierre, brique : effet perlant durable et anti-infiltrations.</p>
-        <span class="num-watermark">06</span>
-      </article>
+        <h3 class="font-heading font-bold text-leaf-800 text-lg mb-2">Hydrofuge façade</h3>
+        <p class="text-ink-500 text-sm leading-relaxed relative z-10">Crépi, pierre, brique : effet perlant durable anti-infiltrations.</p>
+        <span class="num-wm">06</span>
+      </a>
 
-      <article class="service-card-v2 reveal-stagger">
-        <a href="hydrofuge.html#anti-mousse" class="absolute inset-0 z-10" aria-label="Anti-mousse"></a>
+      <a href="gouttieres.html" class="service-card reveal-stagger">
         <div class="icon-wrap"><i data-lucide="spray-can" class="w-7 h-7"></i></div>
-        <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Traitement anti-mousse</h3>
-        <p class="text-ink-500 text-sm leading-relaxed">Biocide écologique certifié, action préventive et curative — 3 à 5 ans de protection.</p>
-        <span class="num-watermark">07</span>
-      </article>
+        <h3 class="font-heading font-bold text-leaf-800 text-lg mb-2">Entretien gouttières</h3>
+        <p class="text-ink-500 text-sm leading-relaxed relative z-10">Débouchage, dépose-repose, remplacement. Évite les infiltrations.</p>
+        <span class="num-wm">07</span>
+      </a>
 
-      <article class="service-card-v2 cta-card reveal-stagger flex flex-col justify-between">
+      <a href="#devis" class="service-card cta reveal-stagger flex flex-col justify-between">
         <div>
-          <div class="icon-wrap" style="background:rgba(255,255,255,0.2); color:white;"><i data-lucide="file-text" class="w-7 h-7"></i></div>
+          <div class="icon-wrap"><i data-lucide="file-text" class="w-7 h-7"></i></div>
           <h3 class="font-heading font-bold text-lg mb-2">Besoin d'un devis ?</h3>
-          <p class="text-sm leading-relaxed mb-5 text-white/90">Diagnostic gratuit à domicile, tarifs clairs communiqués avant toute intervention.</p>
+          <p class="text-sm leading-relaxed mb-4 text-white/90 relative z-10">Diagnostic gratuit à domicile, tarifs clairs.</p>
         </div>
-        <a href="#devis" class="btn-white self-start">Prendre RDV <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-        <span class="num-watermark">08</span>
-      </article>
-
+        <span class="inline-flex items-center gap-2 font-bold text-sm">Prendre RDV <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+        <span class="num-wm">08</span>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     POURQUOI NOUS CHOISIR — mosaïque 4 photos + panel texte
+     POURQUOI NOUS — mosaïque photos + panel
 ════════════════════════════════════════════════════════════ -->
-<section class="py-20 lg:py-28 bg-ink-50 relative overflow-hidden">
+<section class="py-20 lg:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
-      <!-- GAUCHE : Mosaïque staggered 4 photos -->
+      <!-- Mosaïque placeholders photos -->
       <div class="lg:col-span-6 relative reveal-left">
         <div class="grid grid-cols-2 gap-4 sm:gap-5">
-          <!-- Colonne 1 (haut + bas) — alignée haut -->
-          <div class="flex flex-col gap-4 sm:gap-5 pt-0">
-            <div class="img-zoom-wrap rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
-              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=85&auto=format&fit=crop" alt="Installation gouttières par Ecovaptoiture" class="w-full h-full object-cover" />
+          <div class="flex flex-col gap-4 sm:gap-5">
+            <div class="photo-placeholder aspect-[4/5]">
+              <div class="ph-inner">
+                <div class="ph-tag">Photo 1 · gros plan</div>
+                <strong style="display:block; font-family:'Inter'; font-size:13px; font-weight:700; margin-bottom:6px; color:#115432;">Détail buse vapeur</strong>
+                Macro de la buse<br/>avec vapeur visible<br/>sur tuile encrassée
+              </div>
             </div>
-            <div class="img-zoom-wrap rounded-2xl overflow-hidden shadow-xl aspect-square">
-              <img src="https://images.unsplash.com/photo-1625165064842-bad97d082d59?w=800&q=85&auto=format&fit=crop" alt="Rénovation hydrofuge toiture Saint-Vincent-de-Tyrosse" class="w-full h-full object-cover" />
+            <div class="photo-placeholder aspect-square">
+              <div class="ph-inner">
+                <div class="ph-tag">Photo 2</div>
+                <strong style="display:block; font-family:'Inter'; font-size:13px; font-weight:700; margin-bottom:6px; color:#115432;">Tuile avant / après</strong>
+                Zone test mi-toiture<br/>(contraste très visible)
+              </div>
             </div>
           </div>
-          <!-- Colonne 2 (haut + bas) — décalée vers le bas de 48px pour effet mosaïque -->
           <div class="flex flex-col gap-4 sm:gap-5 pt-10 sm:pt-14 relative">
             <div class="relative">
-              <div class="img-zoom-wrap rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&auto=format&fit=crop" alt="Intervention nettoyage vapeur de toiture" class="w-full h-full object-cover" />
+              <div class="photo-placeholder aspect-[4/5]">
+                <div class="ph-inner">
+                  <div class="ph-tag">Photo 3 · portrait</div>
+                  <strong style="display:block; font-family:'Inter'; font-size:13px; font-weight:700; margin-bottom:6px; color:#115432;">Technicien en action</strong>
+                  Portrait dynamique<br/>sur toiture basque<br/>tuile canal rouge
+                </div>
               </div>
-              <!-- Badge flottant 100% éco sur coin bas gauche de cette photo -->
-              <div class="absolute -bottom-4 -left-4 bg-brand-900 text-white px-4 py-3 rounded-xl shadow-2xl z-10">
-                <div class="font-heading font-bold text-2xl leading-none flex items-baseline gap-0.5">
-                  <span data-counter="15" data-counter-duration="1400">0</span><span class="text-accent-400">+</span>
+              <!-- Badge ans d'expérience -->
+              <div class="absolute -bottom-4 -left-4 bg-leaf-800 text-white px-5 py-3 rounded-xl shadow-2xl z-10">
+                <div class="font-heading font-bold text-3xl leading-none flex items-baseline gap-0.5">
+                  <span data-counter="15" data-counter-duration="1400">0</span><span style="color:#8fbcf7;">+</span>
                 </div>
                 <div class="text-[10px] text-white/80 tracking-wider uppercase mt-1">Ans d'expérience</div>
               </div>
             </div>
-            <div class="img-zoom-wrap rounded-2xl overflow-hidden shadow-xl aspect-[4/6]">
-              <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=85&auto=format&fit=crop" alt="Camionnette Ecovaptoiture Saint-Vincent-de-Tyrosse" class="w-full h-full object-cover" />
+            <div class="photo-placeholder aspect-[4/6]">
+              <div class="ph-inner">
+                <div class="ph-tag">Photo 4</div>
+                <strong style="display:block; font-family:'Inter'; font-size:13px; font-weight:700; margin-bottom:6px; color:#115432;">Camionnette Ecovap</strong>
+                Véhicule floqué<br/>devant chantier<br/>bord de mer / Landes
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- DROITE : Panel texte carte blanche qui déborde -->
+      <!-- Panel texte -->
       <div class="lg:col-span-6 reveal-right">
-        <div class="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 lg:p-12 lg:-ml-8 relative">
-          <div class="section-label"><span></span>Pourquoi nous choisir</div>
-          <h2 class="font-heading font-bold text-brand-900 text-3xl sm:text-4xl lg:text-5xl leading-tight mb-8">
-            Ecovaptoiture,<br />
-            <span class="text-accent-500">votre partenaire de confiance</span>
-          </h2>
+        <div class="section-label">Pourquoi nous choisir</div>
+        <h2 class="font-heading font-bold text-leaf-800 text-4xl sm:text-5xl leading-tight mb-8">
+          La vapeur,<br/>
+          <span class="text-gradient-logo">le savoir-faire local.</span>
+        </h2>
 
-          <!-- Bloc checkmark 1 -->
-          <div class="flex gap-4 mb-6">
-            <div class="flex-shrink-0 w-8 h-8 rounded-full border-2 border-accent-500/30 flex items-center justify-center mt-1">
-              <i data-lucide="check" class="w-4 h-4 text-accent-500"></i>
-            </div>
-            <p class="text-ink-600 text-base leading-relaxed">
-              Jeune entreprise locale basée à Saint-Vincent-de-Tyrosse, nous intervenons chez les particuliers et professionnels des Landes et du Pays Basque pour le nettoyage écologique de toitures, terrasses et bardages à la vapeur basse pression. Notre engagement : zéro produit chimique, préservation des matériaux, tarifs clairs annoncés dès le devis.
-            </p>
+        <div class="flex gap-4 mb-6">
+          <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5" style="background: linear-gradient(135deg, #156b3c, #1a6cc2);">
+            <i data-lucide="check" class="w-4 h-4 text-white"></i>
           </div>
-
-          <!-- Bloc checkmark 2 -->
-          <div class="flex gap-4 mb-8">
-            <div class="flex-shrink-0 w-8 h-8 rounded-full border-2 border-accent-500/30 flex items-center justify-center mt-1">
-              <i data-lucide="check" class="w-4 h-4 text-accent-500"></i>
-            </div>
-            <p class="text-ink-600 text-base leading-relaxed">
-              Pas de mauvaise surprise : devis détaillé et gratuit, délai d'intervention annoncé. Que ce soit pour un démoussage, un nettoyage de terrasse ou la pose d'un hydrofuge garanti 10 ans, nous nous adaptons à vos contraintes et à votre budget.
-            </p>
-          </div>
-
-          <!-- Stats animés -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-y border-ink-100 mb-8">
-            <div class="text-center sm:text-left">
-              <div class="font-heading font-bold text-brand-900 text-2xl lg:text-3xl leading-none">
-                <span data-counter="100" data-counter-duration="1600" data-counter-suffix="%">0</span>
-              </div>
-              <div class="text-ink-500 text-[10px] lg:text-xs mt-1 tracking-wide uppercase">Écologique</div>
-            </div>
-            <div class="text-center sm:text-left">
-              <div class="font-heading font-bold text-brand-900 text-2xl lg:text-3xl leading-none">
-                <span data-counter="48" data-counter-duration="1400" data-counter-suffix="h">0</span>
-              </div>
-              <div class="text-ink-500 text-[10px] lg:text-xs mt-1 tracking-wide uppercase">Délai devis</div>
-            </div>
-            <div class="text-center sm:text-left">
-              <div class="font-heading font-bold text-brand-900 text-2xl lg:text-3xl leading-none">
-                <span data-counter="10" data-counter-duration="1800">0</span><span class="text-accent-500"> ans</span>
-              </div>
-              <div class="text-ink-500 text-[10px] lg:text-xs mt-1 tracking-wide uppercase">Garantie hydrofuge</div>
-            </div>
-            <div class="text-center sm:text-left">
-              <div class="font-heading font-bold text-brand-900 text-2xl lg:text-3xl leading-none">
-                <span data-counter="2" data-counter-duration="1400">0</span><span class="text-accent-500"> dép.</span>
-              </div>
-              <div class="text-ink-500 text-[10px] lg:text-xs mt-1 tracking-wide uppercase">Zone 40 & 64</div>
-            </div>
-          </div>
-
-          <a href="a-propos.html" class="btn-navy btn-magnetic">En savoir plus sur nous</a>
+          <p class="text-ink-700 text-base leading-relaxed">
+            <strong class="text-leaf-800">Basés à Saint-Vincent-de-Tyrosse</strong>, nous intervenons chez particuliers et professionnels des Landes et du Pays Basque. Zéro produit chimique, préservation des matériaux, tarifs clairs dès le devis.
+          </p>
         </div>
+
+        <div class="flex gap-4 mb-8">
+          <div class="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center mt-0.5" style="background: linear-gradient(135deg, #156b3c, #1a6cc2);">
+            <i data-lucide="check" class="w-4 h-4 text-white"></i>
+          </div>
+          <p class="text-ink-700 text-base leading-relaxed">
+            <strong class="text-leaf-800">Pas de mauvaise surprise :</strong> devis détaillé gratuit, délai annoncé. Démoussage, hydrofuge garanti 10 ans — nous adaptons à vos contraintes et votre budget.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 border-y border-ink-100 mb-8">
+          <div>
+            <div class="font-heading font-bold text-leaf-800 text-3xl leading-none">
+              <span data-counter="100" data-counter-duration="1600" data-counter-suffix="%">0</span>
+            </div>
+            <div class="text-ink-500 text-[10px] mt-1 tracking-wide uppercase">Écologique</div>
+          </div>
+          <div>
+            <div class="font-heading font-bold text-leaf-800 text-3xl leading-none">
+              <span data-counter="48" data-counter-duration="1400" data-counter-suffix="h">0</span>
+            </div>
+            <div class="text-ink-500 text-[10px] mt-1 tracking-wide uppercase">Délai devis</div>
+          </div>
+          <div>
+            <div class="font-heading font-bold text-leaf-800 text-3xl leading-none">
+              <span data-counter="10" data-counter-duration="1800">0</span><span style="color:#1a6cc2;"> ans</span>
+            </div>
+            <div class="text-ink-500 text-[10px] mt-1 tracking-wide uppercase">Garantie</div>
+          </div>
+          <div>
+            <div class="font-heading font-bold text-leaf-800 text-3xl leading-none">
+              <span data-counter="2" data-counter-duration="1400">0</span><span style="color:#1a6cc2;"> dép.</span>
+            </div>
+            <div class="text-ink-500 text-[10px] mt-1 tracking-wide uppercase">Zone 40 & 64</div>
+          </div>
+        </div>
+
+        <a href="a-propos.html" class="btn btn-leaf">En savoir plus <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
 
     </div>
@@ -579,33 +832,51 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     AVANT / APRÈS — slider de rénovation
+     AVANT / APRÈS (placeholder dual)
 ════════════════════════════════════════════════════════════ -->
 <section class="py-20 lg:py-28 bg-ink-50 relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-5 gap-12 items-center">
 
       <div class="lg:col-span-2 reveal">
-        <div class="section-label"><span></span>Nos réalisations</div>
-        <h2 class="font-heading font-bold text-brand-900 text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6">
-          Toiture démoussée<br />
-          <span class="text-accent-500">avant / après</span>
+        <div class="section-label">Nos réalisations</div>
+        <h2 class="font-heading font-bold text-leaf-800 text-4xl sm:text-5xl leading-tight mb-6">
+          Toiture démoussée<br/>
+          <span class="text-gradient-logo">avant / après</span>
         </h2>
         <p class="text-ink-600 text-base leading-relaxed mb-6">
-          Faites glisser le curseur pour découvrir la transformation d'une toiture envahie par les mousses, nettoyée à la vapeur basse pression. Aucun produit chimique, aucune casse de tuile — juste la puissance de la vapeur et le savoir-faire Ecovaptoiture.
+          Glissez le curseur pour découvrir la transformation d'une toiture envahie par les mousses, nettoyée à la vapeur basse pression. Aucun produit chimique, aucune casse.
         </p>
         <ul class="space-y-3 text-ink-700 text-sm mb-8">
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-accent-500"></i>Élimination complète mousses, lichens, algues</li>
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-accent-500"></i>Sans haute pression, sans micro-fissure</li>
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-accent-500"></i>Option hydrofuge microporeux 10 ans</li>
+          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-leaf-500"></i>Élimination mousses, lichens, algues</li>
+          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5" style="color:#1a6cc2;"></i>Sans haute pression, sans micro-fissure</li>
+          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-leaf-500"></i>Option hydrofuge 10 ans</li>
         </ul>
-        <a href="#devis" class="btn-primary">Demander un devis<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="#devis" class="btn btn-primary">Demander un devis<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
 
       <div class="lg:col-span-3 reveal-right">
         <div id="ba-slider" class="ba-slider aspect-[16/10]">
-          <div class="ba-after"><img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1400&q=90&auto=format&fit=crop" alt="Toiture propre après nettoyage vapeur" style="filter: saturate(1.05) brightness(1.02);" /></div>
-          <div id="ba-before" class="ba-before"><img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?w=1400&q=90&auto=format&fit=crop" alt="Toiture avant nettoyage — mousses et lichens" style="filter: saturate(0.55) brightness(0.78) contrast(1.15) hue-rotate(60deg) sepia(0.35);" /></div>
+          <!-- Après = placeholder "propre" (bleu) -->
+          <div class="ba-after">
+            <div class="photo-placeholder dark w-full h-full" style="border-radius:0; border:none;">
+              <div class="ph-inner">
+                <div class="ph-tag" style="background: rgba(187,215,252,0.2); color:#bbd7fc;">APRÈS</div>
+                <strong style="display:block; font-family:'Inter'; font-size:14px; font-weight:700; margin-bottom:6px; color:#bbd7fc;">Toiture nettoyée · tuiles propres</strong>
+                <span style="opacity:.8;">Photo post-intervention<br/>même angle, même lumière</span>
+              </div>
+            </div>
+          </div>
+          <!-- Avant = placeholder "sale" (vert foncé mousses) -->
+          <div class="ba-before">
+            <div class="photo-placeholder w-full h-full" style="border-radius:0; border:none; background: repeating-linear-gradient(135deg, rgba(13,63,39,0.3) 0, rgba(13,63,39,0.3) 1px, transparent 1px, transparent 14px), linear-gradient(160deg, #3d3524 0%, #0d3f27 100%);">
+              <div class="ph-inner" style="color: rgba(255,255,255,0.85);">
+                <div class="ph-tag" style="background: rgba(127,215,159,0.2); color:#7fd79f;">AVANT</div>
+                <strong style="display:block; font-family:'Inter'; font-size:14px; font-weight:700; margin-bottom:6px; color:#7fd79f;">Toiture envahie de mousses</strong>
+                <span style="opacity:.8;">Photo pré-intervention<br/>même angle, même lumière</span>
+              </div>
+            </div>
+          </div>
           <div class="ba-label before">Avant</div>
           <div class="ba-label after">Après</div>
           <div id="ba-handle" class="ba-handle">
@@ -614,6 +885,7 @@
             </div>
           </div>
         </div>
+        <p class="text-center mt-4 text-xs font-mono text-ink-400">⚠ Remplacer par vos photos réelles avant/après (même cadrage, même lumière)</p>
       </div>
 
     </div>
@@ -621,76 +893,166 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     COMMENT ÇA MARCHE — 4 étapes navy
+     PROCESS 4 ÉTAPES
 ════════════════════════════════════════════════════════════ -->
-<section class="py-20 lg:py-28 relative overflow-hidden" style="background:#15803d;">
-  <div class="gradient-mesh" style="opacity:0.6;"></div>
+<section class="py-20 lg:py-28 relative overflow-hidden" style="background: linear-gradient(135deg, #0d3f27 0%, #115432 30%, #124781 70%, #0f3b68 100%);">
+  <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 32px 32px;"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14 reveal">
-      <div class="section-label justify-center" style="color:#86efac;"><span style="background:#86efac;"></span>Notre méthode</div>
-      <h2 class="font-heading font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">Comment Ça Marche ?</h2>
-      <p class="text-white/70 max-w-2xl mx-auto text-base">
-        Un process simple et transparent, de votre premier appel jusqu'à la garantie finale.
-      </p>
+      <div class="section-label light justify-center">Notre méthode</div>
+      <h2 class="font-heading font-bold text-white text-4xl sm:text-5xl mb-4">De l'appel à la garantie.</h2>
+      <p class="text-white/70 max-w-2xl mx-auto text-base">Un process simple, transparent, sans surprise.</p>
     </div>
 
-    <div class="process-steps-wrapper grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
-
-      <div class="process-card-v2 text-center relative z-10 reveal-stagger">
-        <div class="process-circle process-circle-orange mx-auto mb-5"><i data-lucide="phone" class="w-9 h-9" style="color:#22c55e;"></i></div>
-        <div class="inline-block text-white font-heading font-bold text-xs px-3 py-1 rounded-full tracking-widest mb-3" style="background:#22c55e;">ÉTAPE 01</div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div class="text-center reveal-stagger">
+        <div class="w-24 h-24 mx-auto mb-5 rounded-full flex items-center justify-center border-2 border-white/20 text-white" style="background: rgba(46,163,94,0.2);">
+          <i data-lucide="phone" class="w-10 h-10"></i>
+        </div>
+        <div class="inline-block text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-[0.2em] mb-3" style="background: rgba(255,255,255,0.15);">ÉTAPE 01</div>
         <h3 class="font-heading font-bold text-white text-xl mb-2">Prise de contact</h3>
-        <p class="text-white/80 text-sm leading-relaxed px-2">Appel ou formulaire : décrivez votre besoin, envoyez-nous quelques photos si possible.</p>
+        <p class="text-white/75 text-sm leading-relaxed">Appel ou formulaire — décrivez votre besoin, photos bienvenues.</p>
       </div>
-
-      <div class="process-card-v2 text-center relative z-10 reveal-stagger">
-        <div class="process-circle process-circle-orange mx-auto mb-5"><i data-lucide="search" class="w-9 h-9" style="color:#22c55e;"></i></div>
-        <div class="inline-block text-white font-heading font-bold text-xs px-3 py-1 rounded-full tracking-widest mb-3" style="background:#22c55e;">ÉTAPE 02</div>
+      <div class="text-center reveal-stagger">
+        <div class="w-24 h-24 mx-auto mb-5 rounded-full flex items-center justify-center border-2 border-white/20 text-white" style="background: rgba(58,127,225,0.2);">
+          <i data-lucide="search" class="w-10 h-10"></i>
+        </div>
+        <div class="inline-block text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-[0.2em] mb-3" style="background: rgba(255,255,255,0.15);">ÉTAPE 02</div>
         <h3 class="font-heading font-bold text-white text-xl mb-2">Diagnostic sur site</h3>
-        <p class="text-white/80 text-sm leading-relaxed px-2">Visite gratuite sous 48h : analyse du support, état des mousses, mesures précises.</p>
+        <p class="text-white/75 text-sm leading-relaxed">Visite gratuite sous 48h : analyse, mousses, mesures précises.</p>
       </div>
-
-      <div class="process-card-v2 text-center relative z-10 reveal-stagger">
-        <div class="process-circle process-circle-orange mx-auto mb-5"><i data-lucide="file-text" class="w-9 h-9" style="color:#22c55e;"></i></div>
-        <div class="inline-block text-white font-heading font-bold text-xs px-3 py-1 rounded-full tracking-widest mb-3" style="background:#22c55e;">ÉTAPE 03</div>
+      <div class="text-center reveal-stagger">
+        <div class="w-24 h-24 mx-auto mb-5 rounded-full flex items-center justify-center border-2 border-white/20 text-white" style="background: rgba(46,163,94,0.2);">
+          <i data-lucide="file-text" class="w-10 h-10"></i>
+        </div>
+        <div class="inline-block text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-[0.2em] mb-3" style="background: rgba(255,255,255,0.15);">ÉTAPE 03</div>
         <h3 class="font-heading font-bold text-white text-xl mb-2">Devis gratuit</h3>
-        <p class="text-white/80 text-sm leading-relaxed px-2">Devis détaillé sous 48h : prix ferme, étapes précisées, aucun supplément caché.</p>
+        <p class="text-white/75 text-sm leading-relaxed">Détail sous 48h : prix ferme, étapes, aucun supplément.</p>
       </div>
-
-      <div class="process-card-v2 text-center relative z-10 reveal-stagger">
-        <div class="process-circle process-circle-orange mx-auto mb-5"><i data-lucide="sparkles" class="w-9 h-9" style="color:#22c55e;"></i></div>
-        <div class="inline-block text-white font-heading font-bold text-xs px-3 py-1 rounded-full tracking-widest mb-3" style="background:#22c55e;">ÉTAPE 04</div>
+      <div class="text-center reveal-stagger">
+        <div class="w-24 h-24 mx-auto mb-5 rounded-full flex items-center justify-center border-2 border-white/20 text-white" style="background: rgba(58,127,225,0.2);">
+          <i data-lucide="sparkles" class="w-10 h-10"></i>
+        </div>
+        <div class="inline-block text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-[0.2em] mb-3" style="background: rgba(255,255,255,0.15);">ÉTAPE 04</div>
         <h3 class="font-heading font-bold text-white text-xl mb-2">Chantier & garantie</h3>
-        <p class="text-white/80 text-sm leading-relaxed px-2">Nettoyage vapeur, traitement, option hydrofuge. Garantie jusqu'à 10 ans selon prestation.</p>
+        <p class="text-white/75 text-sm leading-relaxed">Vapeur, traitement, option hydrofuge. Garantie jusqu'à 10 ans.</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     DEVIS GRATUIT — formulaire orange
+     AVIS CLIENTS
 ════════════════════════════════════════════════════════════ -->
-<section id="devis" class="py-20 lg:py-28 bg-ink-50">
+<section class="py-20 lg:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="relative rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); box-shadow: 0 40px 80px -40px rgba(34,197,94,0.55);">
-      <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5), transparent 40%);"></div>
-      <div class="relative grid grid-cols-1 lg:grid-cols-5 gap-0">
+    <div class="text-center mb-14 reveal">
+      <div class="section-label justify-center">Avis clients</div>
+      <h2 class="font-heading font-bold text-leaf-800 text-4xl sm:text-5xl mb-4">Ce qu'ils en disent</h2>
+    </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="avis-card reveal-stagger">
+        <div class="flex gap-1 mb-4">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-ink-700 text-sm leading-relaxed mb-5">« Toiture couverte de mousses nettoyée à la vapeur : rendu impeccable, sans casse de tuile, sans produit chimique. Équipe sérieuse et propre. »</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-ink-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-white text-sm" style="background: linear-gradient(135deg, #156b3c, #1a6cc2);">CB</div>
+          <div>
+            <div class="font-heading font-bold text-leaf-800 text-sm">Céline B.</div>
+            <div class="text-ink-500 text-xs">Dax · Il y a 2 semaines</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="avis-card reveal-stagger">
+        <div class="flex gap-1 mb-4">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-ink-700 text-sm leading-relaxed mb-5">« Démoussage + hydrofuge sur ma toiture en tuiles : travail nickel, devis respecté, explications claires du procédé vapeur. »</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-ink-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-white text-sm" style="background: linear-gradient(135deg, #156b3c, #1a6cc2);">LM</div>
+          <div>
+            <div class="font-heading font-bold text-leaf-800 text-sm">Laurent M.</div>
+            <div class="text-ink-500 text-xs">Bayonne · Il y a 1 mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="avis-card reveal-stagger">
+        <div class="flex gap-1 mb-4">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="text-ink-700 text-sm leading-relaxed mb-5">« Terrasse bois remise à neuf avant l'été, sans décolorer le pin. Franchement bluffée par le résultat de la vapeur basse pression. »</p>
+        <div class="flex items-center gap-3 pt-4 border-t border-ink-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center font-heading font-bold text-white text-sm" style="background: linear-gradient(135deg, #156b3c, #1a6cc2);">SR</div>
+          <div>
+            <div class="font-heading font-bold text-leaf-800 text-sm">Sophie R.</div>
+            <div class="text-ink-500 text-xs">Hossegor · Il y a 3 semaines</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PARTENAIRES / MARQUES
+════════════════════════════════════════════════════════════ -->
+<section class="py-14 bg-ink-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8 reveal">
+      <div class="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-400 mb-2">Produits & partenaires</div>
+      <p class="text-ink-500 text-sm">Nous travaillons avec les marques de référence du secteur.</p>
+    </div>
+
+    <div class="partners-marquee">
+      <div class="partners-track">
+        <div class="partner-card"><span class="brand-wm brand-karcher">KÄR<span class="ac">CHER</span></span></div>
+        <div class="partner-card"><span class="brand-wm brand-sika">SIKA</span></div>
+        <div class="partner-card"><span class="brand-wm brand-sikkens">Sikkens</span></div>
+        <div class="partner-card"><span class="brand-wm brand-algimouss">Algi<span class="leaf">mouss</span></span></div>
+        <div class="partner-card"><span class="brand-wm brand-owatrol">OWATROL</span></div>
+        <div class="partner-card"><span class="brand-wm brand-guard">GUARD<span class="em">EX</span></span></div>
+        <div class="partner-card"><span class="brand-wm brand-rubson">rubson</span></div>
+        <!-- duplicate for seamless loop -->
+        <div class="partner-card"><span class="brand-wm brand-karcher">KÄR<span class="ac">CHER</span></span></div>
+        <div class="partner-card"><span class="brand-wm brand-sika">SIKA</span></div>
+        <div class="partner-card"><span class="brand-wm brand-sikkens">Sikkens</span></div>
+        <div class="partner-card"><span class="brand-wm brand-algimouss">Algi<span class="leaf">mouss</span></span></div>
+        <div class="partner-card"><span class="brand-wm brand-owatrol">OWATROL</span></div>
+        <div class="partner-card"><span class="brand-wm brand-guard">GUARD<span class="em">EX</span></span></div>
+        <div class="partner-card"><span class="brand-wm brand-rubson">rubson</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DEVIS
+════════════════════════════════════════════════════════════ -->
+<section id="devis" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #156b3c 0%, #115432 40%, #1a6cc2 100%); box-shadow: 0 40px 80px -40px rgba(21,107,60,0.55);">
+      <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5), transparent 40%);"></div>
+      <div class="vapor-field" id="vapor-field-devis"></div>
+
+      <div class="relative grid grid-cols-1 lg:grid-cols-5 gap-0">
         <div class="lg:col-span-2 relative min-h-[320px] lg:min-h-full">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85&auto=format&fit=crop" alt="nettoyeur de toiture en échange avec un client" class="w-full h-full object-cover absolute inset-0" />
-          <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-brand-900/60 via-transparent to-transparent"></div>
+          <div class="photo-placeholder dark w-full h-full" style="border-radius:0; border:none; min-height:320px;">
+            <div class="ph-inner">
+              <div class="ph-tag" style="background: rgba(187,215,252,0.2); color:#bbd7fc;">PHOTO DEVIS</div>
+              <strong style="display:block; font-family:'Inter'; font-size:14px; font-weight:700; margin-bottom:6px; color:#bbd7fc;">Rencontre client sur chantier</strong>
+              <span style="opacity:.8;">Technicien Ecovap<br/>en discussion avec le client<br/>devant la toiture, tablette en main</span>
+            </div>
+          </div>
         </div>
 
-        <div class="lg:col-span-3 p-8 sm:p-12 text-white">
-          <div class="section-label" style="color:rgba(255,255,255,0.9);"><span style="background:white;"></span>Devis gratuit</div>
-          <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4 reveal">
-            Devis gratuit et<br />
-            tarifs transparents
-          </h2>
-          <p class="text-white/90 text-base mb-8 max-w-lg reveal">
-            Décrivez-nous votre besoin en quelques mots — nous vous rappelons sous 15 minutes avec une première estimation.
-          </p>
+        <div class="lg:col-span-3 p-8 sm:p-12 text-white relative z-10">
+          <div class="section-label light">Devis gratuit</div>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-4 reveal">Parlons de votre toiture.</h2>
+          <p class="text-white/90 text-base mb-8 max-w-lg reveal">Décrivez-nous votre besoin — nous vous rappelons sous 15 minutes avec une première estimation.</p>
 
           <form class="space-y-5 reveal" onsubmit="event.preventDefault(); alert('Merci ! Nous vous rappelons sous 15 minutes.');">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -709,15 +1071,11 @@
             </div>
             <div>
               <label for="f-msg" class="form-label">Décrivez votre besoin</label>
-              <textarea id="f-msg" placeholder="Ex : mousse sous toiture, remplacement gouttières, nettoyage gouttières zinguerie…" rows="3" class="form-field resize-none"></textarea>
+              <textarea id="f-msg" placeholder="Ex : mousse sous toiture, nettoyage gouttières, hydrofuge..." rows="3" class="form-field resize-none"></textarea>
             </div>
-            <button type="submit" class="btn-navy w-full sm:w-auto">
-              Demander un RDV
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
+            <button type="submit" class="btn btn-white">Demander un RDV <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
           </form>
         </div>
-
       </div>
     </div>
   </div>
@@ -726,148 +1084,51 @@
 <!-- ═══════════════════════════════════════════════════════════
      ZONE D'INTERVENTION
 ════════════════════════════════════════════════════════════ -->
-<section class="py-20 lg:py-28 relative overflow-hidden" style="background: linear-gradient(180deg, #15803d 0%, #166534 100%);">
-  <div class="gradient-mesh" style="opacity:0.5;"></div>
+<section class="py-20 lg:py-28 relative overflow-hidden" style="background: linear-gradient(180deg, #0d3f27 0%, #0a2447 100%);">
+  <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 28px 28px;"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
       <div class="text-white reveal-left">
-        <div class="section-label" style="color:#86efac;"><span style="background:#86efac;"></span>Zone d'intervention</div>
-        <h2 class="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6">
-          Nous intervenons<br />
-          dans les Landes et<br />
-          <span class="text-accent-500">le Pays Basque</span>
+        <div class="section-label light">Zone d'intervention</div>
+        <h2 class="font-heading font-bold text-4xl sm:text-5xl leading-tight mb-6">
+          Landes (40) &<br/><span style="background: linear-gradient(95deg, #7fd79f 0%, #bbd7fc 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Pays Basque (64)</span>
         </h2>
-        <p class="text-white/80 text-base leading-relaxed mb-8">
-          Basés à Saint-Vincent-de-Tyrosse, nous couvrons l'ensemble des Landes (40) et des Pyrénées-Atlantiques (64) — du littoral basque à Pau, de Mont-de-Marsan à Hendaye.
-        </p>
+        <p class="text-white/75 text-base leading-relaxed mb-8">Basés à Saint-Vincent-de-Tyrosse, nous couvrons l'ensemble du littoral basque jusqu'à Pau, de Mont-de-Marsan à Hendaye.</p>
 
-        <div class="grid grid-cols-2 gap-x-8 gap-y-1 mb-8">
+        <div class="grid grid-cols-2 gap-x-8 mb-8">
           <div>
-            <div class="text-accent-500 font-heading font-bold text-xs tracking-widest uppercase mb-2">Landes (40)</div>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Saint-Vincent-de-Tyrosse</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Dax · Mont-de-Marsan</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Hossegor · Capbreton</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Soustons · Labenne</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Tarnos · Saint-Martin-de-Seignanx</a>
+            <div class="text-leaf-300 font-heading font-bold text-xs tracking-[0.2em] uppercase mb-3">Landes (40)</div>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#7fd79f;"></i> Saint-Vincent-de-Tyrosse</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#7fd79f;"></i> Dax · Mont-de-Marsan</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#7fd79f;"></i> Hossegor · Capbreton</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#7fd79f;"></i> Soustons · Labenne</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#7fd79f;"></i> Tarnos</a>
           </div>
           <div>
-            <div class="text-accent-500 font-heading font-bold text-xs tracking-widest uppercase mb-2">Pyrénées-Atlantiques (64)</div>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Bayonne · Anglet</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Biarritz · Bidart</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Saint-Jean-de-Luz · Hendaye</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Pau · Orthez</a>
-            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-accent-500"></i> Boucau</a>
+            <div class="font-heading font-bold text-xs tracking-[0.2em] uppercase mb-3" style="color:#bbd7fc;">Pyrénées-Atlantiques (64)</div>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#bbd7fc;"></i> Bayonne · Anglet</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#bbd7fc;"></i> Biarritz · Bidart</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#bbd7fc;"></i> Saint-Jean-de-Luz · Hendaye</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#bbd7fc;"></i> Pau · Orthez</a>
+            <a href="#" class="zone-item"><i data-lucide="map-pin" class="w-3.5 h-3.5" style="color:#bbd7fc;"></i> Boucau</a>
           </div>
         </div>
 
-        <a href="tel:0602020301" class="btn-primary btn-magnetic">
-          <i data-lucide="phone" class="w-4 h-4"></i>
-          06 02 02 03 01
-        </a>
+        <a href="tel:0602020301" class="btn btn-primary"><i data-lucide="phone" class="w-4 h-4"></i> 06 02 02 03 01</a>
       </div>
 
-      <div class="reveal-right">
-        <div class="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white/10">
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-1.4050%2C43.5631%2C-1.2050%2C43.7631&amp;layer=mapnik&amp;marker=43.6631%2C-1.3050"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-            class="w-full h-full"
-            title="Zone d'intervention Ecovaptoiture — Saint-Vincent-de-Tyrosse"></iframe>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
-     AVIS CLIENTS — bleu clair + cards flottantes asymétriques
-════════════════════════════════════════════════════════════ -->
-<section class="reviews-section py-20 lg:py-28 relative overflow-hidden" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">
-  <!-- Silhouette nettoyeur de toiture subtile en fond -->
-  <div class="absolute inset-0 opacity-[0.08] pointer-events-none" style="background-image: radial-gradient(ellipse at 15% 50%, #ffffff 0%, transparent 40%);"></div>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-
-      <!-- COLONNE GAUCHE : titre + CTA -->
-      <div class="lg:col-span-5 lg:sticky lg:top-28 reveal">
-        <div class="section-label" style="color:#86efac;"><span style="background:#86efac;"></span>Avis clients</div>
-        <h2 class="font-heading font-bold text-white text-3xl sm:text-4xl lg:text-5xl leading-tight mb-6">
-          Ce que disent<br/>nos clients
-        </h2>
-        <p class="text-white/85 text-base leading-relaxed mb-8 max-w-md">
-          La satisfaction de nos clients est notre meilleure publicité. Découvrez les retours de particuliers et professionnels des Landes et du Pays Basque qui ont choisi le nettoyage écologique Ecovaptoiture.
-        </p>
-        <!-- avis fictifs à remplacer -->
-        <div class="flex items-center gap-4 mb-8">
-          <div class="flex gap-0.5 text-white">
-            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+      <div class="relative reveal-right">
+        <div class="photo-placeholder dark aspect-[4/3] rounded-3xl">
+          <div class="ph-inner">
+            <div class="ph-tag" style="background: rgba(127,215,159,0.2); color:#7fd79f;">CARTE · ZONE</div>
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#7fd79f" stroke-width="1.3" style="margin-bottom:12px; opacity:0.5;">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <strong style="display:block; font-family:'Inter'; font-size:14px; font-weight:700; margin-bottom:6px; color:#7fd79f;">Carte Landes / Pays Basque</strong>
+            <span style="opacity:.8;">Fond sobre · marqueur Ecovap<br/>sur Saint-Vincent-de-Tyrosse<br/>zone d'intervention en halo</span>
           </div>
-          <span class="font-heading font-bold text-white text-lg">5/5</span>
-          <span class="text-white/80 text-sm">· Nouveau — premiers avis à venir</span>
-        </div>
-        <a href="#" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white hover:bg-brand-900 text-brand-900 hover:text-white font-heading font-bold text-sm tracking-wider uppercase shadow-xl transition-all btn-magnetic">
-          Voir tous les avis
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-      </div>
-
-      <!-- COLONNE DROITE : cards scattered -->
-      <div class="lg:col-span-7">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-
-          <!-- Colonne A -->
-          <div class="space-y-5 lg:space-y-6">
-            <!-- Card 1 -->
-            <div class="review-float bg-white rounded-2xl p-6 lg:p-7 shadow-2xl relative reveal-stagger overflow-hidden">
-              <span class="review-quote-mark">&rdquo;</span>
-              <p class="relative text-ink-700 text-[15px] leading-relaxed mb-5 pr-6">"Toiture envahie par les mousses, nettoyée à la vapeur en une journée. Aucune casse, résultat bluffant. Devis respecté au centime près."</p>
-              <div class="relative">
-                <div class="font-heading font-bold text-brand-900 text-base">Céline B.</div>
-                <div class="text-[#22c55e] text-sm font-semibold mt-0.5">Dax</div>
-              </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="review-float bg-white rounded-2xl p-6 lg:p-7 shadow-2xl relative reveal-stagger overflow-hidden">
-              <span class="review-quote-mark">&rdquo;</span>
-              <p class="relative text-ink-700 text-[15px] leading-relaxed mb-5 pr-6">"Démoussage + hydrofuge sur tuiles terre cuite. Explications claires du procédé vapeur, équipe sérieuse. Je recommande vraiment."</p>
-              <div class="relative">
-                <div class="font-heading font-bold text-brand-900 text-base">Laurent M.</div>
-                <div class="text-[#22c55e] text-sm font-semibold mt-0.5">Bayonne</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Colonne B (offset vers le bas) -->
-          <div class="space-y-5 lg:space-y-6 sm:mt-14 lg:mt-20">
-            <!-- Card 3 -->
-            <div class="review-float bg-white rounded-2xl p-6 lg:p-7 shadow-2xl relative reveal-stagger overflow-hidden">
-              <span class="review-quote-mark">&rdquo;</span>
-              <p class="relative text-ink-700 text-[15px] leading-relaxed mb-5 pr-6">"Terrasse bois remise à neuf avant l'été sans décolorer le pin. Bluffée par la vapeur basse pression, très différent d'un Kärcher !"</p>
-              <div class="relative">
-                <div class="font-heading font-bold text-brand-900 text-base">Sophie R.</div>
-                <div class="text-[#22c55e] text-sm font-semibold mt-0.5">Hossegor</div>
-              </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="review-float bg-white rounded-2xl p-6 lg:p-7 shadow-2xl relative reveal-stagger overflow-hidden">
-              <span class="review-quote-mark">&rdquo;</span>
-              <p class="relative text-ink-700 text-[15px] leading-relaxed mb-5 pr-6">"Gouttières dégagées + bardage bois nettoyé. Travail propre, rangement impeccable. Tarif honnête et sans surprise."</p>
-              <div class="relative">
-                <div class="font-heading font-bold text-brand-900 text-base">David R.</div>
-                <div class="text-[#22c55e] text-sm font-semibold mt-0.5">Anglet</div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -876,298 +1137,169 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     LE PROCÉDÉ VAPEUR — différenciateur
+     FOOTER
 ════════════════════════════════════════════════════════════ -->
-<section class="py-14 lg:py-16 bg-white border-y border-ink-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center reveal">
-    <div class="section-label justify-center"><span></span>Notre procédé exclusif</div>
-    <h2 class="font-heading font-bold text-brand-900 text-2xl sm:text-3xl lg:text-4xl">
-      Pourquoi la <span class="text-accent-500">vapeur basse pression</span> ?
-    </h2>
-    <p class="text-ink-500 mt-3 text-sm max-w-xl mx-auto">
-      Une technologie écologique qui surpasse la haute pression traditionnelle — sans produit chimique et sans abîmer vos matériaux.
-    </p>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
-    <div class="bg-accent-50 rounded-2xl p-6 border border-accent-100 text-center">
-      <div class="icon-badge-premium mx-auto mb-4"><i data-lucide="leaf" class="w-7 h-7"></i></div>
-      <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">100% écologique</h3>
-      <p class="text-ink-600 text-sm">Uniquement de l'eau transformée en vapeur. Aucun biocide agressif, aucun rejet chimique dans vos sols.</p>
-    </div>
-    <div class="bg-accent-50 rounded-2xl p-6 border border-accent-100 text-center">
-      <div class="icon-badge-premium mx-auto mb-4"><i data-lucide="shield-check" class="w-7 h-7"></i></div>
-      <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Préserve vos matériaux</h3>
-      <p class="text-ink-600 text-sm">Pas de haute pression destructrice. Les tuiles, l'ardoise, le bois et la pierre gardent leur intégrité.</p>
-    </div>
-    <div class="bg-accent-50 rounded-2xl p-6 border border-accent-100 text-center">
-      <div class="icon-badge-premium mx-auto mb-4"><i data-lucide="flame" class="w-7 h-7"></i></div>
-      <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Vapeur à 150°C</h3>
-      <p class="text-ink-600 text-sm">La chaleur tue mousses, lichens et algues en profondeur — effet durable sans traitement chimique.</p>
-    </div>
-    <div class="bg-accent-50 rounded-2xl p-6 border border-accent-100 text-center">
-      <div class="icon-badge-premium mx-auto mb-4"><i data-lucide="timer" class="w-7 h-7"></i></div>
-      <h3 class="font-heading font-bold text-brand-900 text-lg mb-2">Résultat durable</h3>
-      <p class="text-ink-600 text-sm">Associé à notre hydrofuge microporeux, protection garantie jusqu'à 10 ans.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
-     PARTENAIRES / ÉQUIPEMENTS & PRODUITS
-════════════════════════════════════════════════════════════ -->
-<section class="py-16 lg:py-20 bg-gradient-to-b from-white to-ink-50 border-t border-ink-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center reveal">
-    <div class="section-label justify-center"><span></span>Équipements & produits</div>
-    <h2 class="font-heading font-bold text-brand-900 text-2xl sm:text-3xl lg:text-4xl">
-      Les marques <span class="text-accent-600">professionnelles</span> que nous utilisons
-    </h2>
-    <p class="text-ink-500 mt-3 text-sm max-w-2xl mx-auto">
-      Matériel de nettoyage vapeur haut de gamme et traitements certifiés, pour une qualité d'intervention irréprochable sur chacun de vos chantiers.
-    </p>
-  </div>
-  <div class="partners-marquee">
-    <div class="partners-track">
-      <div class="partner-card"><span class="brand-wm brand-karcher">K<span class="ac">Ä</span>RCHER</span></div>
-      <div class="partner-card"><span class="brand-wm brand-algimouss"><span class="leaf">◆</span> Algimouss</span></div>
-      <div class="partner-card"><span class="brand-wm brand-owatrol">Owatrol</span></div>
-      <div class="partner-card"><span class="brand-wm brand-sikkens">Sikkens</span></div>
-      <div class="partner-card"><span class="brand-wm brand-guard">Guard <span class="em">Industrie</span></span></div>
-      <div class="partner-card"><span class="brand-wm brand-sika">SIKAGARD</span></div>
-      <div class="partner-card"><span class="brand-wm brand-rubson">RUBSON</span></div>
-      <!-- duplicate for seamless loop -->
-      <div class="partner-card"><span class="brand-wm brand-karcher">K<span class="ac">Ä</span>RCHER</span></div>
-      <div class="partner-card"><span class="brand-wm brand-algimouss"><span class="leaf">◆</span> Algimouss</span></div>
-      <div class="partner-card"><span class="brand-wm brand-owatrol">Owatrol</span></div>
-      <div class="partner-card"><span class="brand-wm brand-sikkens">Sikkens</span></div>
-      <div class="partner-card"><span class="brand-wm brand-guard">Guard <span class="em">Industrie</span></span></div>
-      <div class="partner-card"><span class="brand-wm brand-sika">SIKAGARD</span></div>
-      <div class="partner-card"><span class="brand-wm brand-rubson">RUBSON</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
-     BANDE DE CONTACT — 4 blocs colorés au-dessus du footer
-════════════════════════════════════════════════════════════ -->
-<section class="bg-white border-t border-ink-100 py-10 lg:py-12">
+<footer class="bg-ink-900 text-white py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-
-      <!-- Adresse -->
-      <div class="flex items-start gap-4 reveal-stagger">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg" style="background:#22c55e;">
-          <i data-lucide="map-pin" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <div class="text-ink-400 text-[11px] font-semibold tracking-widest uppercase mb-1">Adresse</div>
-          <div class="text-brand-900 text-sm font-semibold leading-snug">Saint-Vincent-de-Tyrosse<br />40230 · Landes</div>
-        </div>
-      </div>
-
-      <!-- Mail -->
-      <div class="flex items-start gap-4 reveal-stagger">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg" style="background:#15803d;">
-          <i data-lucide="mail" class="w-5 h-5"></i>
-        </div>
-        <div class="min-w-0">
-          <div class="text-ink-400 text-[11px] font-semibold tracking-widest uppercase mb-1">Écrivez-nous</div>
-          <a href="mailto:ecovaptoiture@gmail.com" class="text-brand-900 text-sm font-semibold hover:text-accent-500 break-all">ecovaptoiture@gmail.com</a>
-        </div>
-      </div>
-
-      <!-- Phone -->
-      <div class="flex items-start gap-4 reveal-stagger">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg" style="background:#22c55e;">
-          <i data-lucide="phone" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <div class="text-ink-400 text-[11px] font-semibold tracking-widest uppercase mb-1">Appelez-nous</div>
-          <a href="tel:0602020301" class="text-brand-900 text-sm font-bold hover:text-accent-500">06 02 02 03 01</a>
-        </div>
-      </div>
-
-      <!-- WhatsApp -->
-      <div class="flex items-start gap-4 reveal-stagger">
-        <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg" style="background:#22c55e;">
-          <i data-lucide="message-circle" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <div class="text-ink-400 text-[11px] font-semibold tracking-widest uppercase mb-1">WhatsApp</div>
-          <a href="https://wa.me/33602020301" class="text-brand-900 text-sm font-bold hover:text-[#22c55e]">06 02 02 03 01</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════
-     FOOTER PRINCIPAL — navy très sombre, 3 colonnes
-════════════════════════════════════════════════════════════ -->
-<footer class="text-white pt-16 pb-8" style="background:#0a2e17;">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-10">
-
-      <!-- Col gauche : Logo + pitch + nettoyeur de toiture + réseaux (5/12) -->
-      <div class="lg:col-span-5 relative">
-        <div class="flex items-center mb-6">
-          <img src="assets/img/logo-ecovap.png" alt="Ecovaptoiture" class="h-24 w-auto logo-footer"  />
-        </div>
-        <p class="text-white/75 text-sm leading-relaxed max-w-md mb-6">
-          Votre spécialiste du nettoyage écologique de toiture à la vapeur basse pression. Interventions dans les Landes (40) et les Pyrénées-Atlantiques (64).
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <img src="assets/img/logo-ecovap.png" alt="Ecovaptoiture" class="h-20 w-auto mb-4 brightness-125" />
+        <p class="text-white/60 text-sm leading-relaxed max-w-md mb-5">
+          Nettoyage écologique de toiture à la vapeur basse pression — Landes (40) & Pyrénées-Atlantiques (64).
         </p>
-
-        <!-- Réseaux sociaux — pack proéminent -->
-        <div class="mb-8">
-          <div class="text-white/60 text-xs font-heading font-bold uppercase tracking-widest mb-3">Suivez-nous</div>
-          <div class="flex items-center gap-3">
-            <a href="#" aria-label="Facebook" class="social-icon-big" style="background:#1877F2;">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
-            </a>
-            <a href="#" aria-label="Instagram" class="social-icon-big" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="social-icon-big" style="background:#0A66C2;">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Photo nettoyeur de toiture footer -->
-        <div class="footer-plumber-wrap hidden lg:block">
-          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=85&auto=format&fit=crop" alt="Artisan Ecovaptoiture" class="footer-plumber" />
+        <div class="flex items-center gap-3">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
         </div>
       </div>
-
-      <!-- Col milieu : Nos services (3/12) -->
-      <div class="lg:col-span-3">
-        <h4 class="font-heading font-bold text-sm uppercase tracking-widest mb-5" style="color:#22c55e;">Nos services</h4>
-        <ul class="space-y-3 text-sm text-white/75">
-          <li><a href="nettoyage-toiture.html" class="hover:text-accent-500 transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-accent-500"></i> Nettoyage vapeur</a></li>
-          <li><a href="nettoyage-toiture.html#demoussage" class="hover:text-accent-500 transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-accent-500"></i> Démoussage profond</a></li>
-          <li><a href="hydrofuge.html" class="hover:text-accent-500 transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-accent-500"></i> Hydrofuge & anti-mousse</a></li>
-          <li><a href="gouttieres.html" class="hover:text-accent-500 transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-accent-500"></i> Entretien gouttières</a></li>
-        </ul>
-      </div>
-
-      <!-- Col droite : carte orange "Être rappelé" (4/12) -->
-      <div class="lg:col-span-4">
-        <div class="rounded-2xl p-6 lg:p-7 shadow-2xl" style="background:#22c55e;">
-          <h4 class="font-heading font-bold text-white text-xl mb-4">Être rappelé</h4>
-          <form class="space-y-3" onsubmit="event.preventDefault(); alert('Merci ! Nous vous rappelons sous 15 minutes.');">
-            <input type="text" placeholder="Votre nom" class="w-full bg-white/10 border border-white/20 text-white placeholder-white/60 px-4 py-2.5 rounded-lg text-sm focus:outline-none focus:border-white" required />
-            <div class="grid grid-cols-2 gap-3">
-              <input type="email" placeholder="Email" class="w-full bg-white/10 border border-white/20 text-white placeholder-white/60 px-4 py-2.5 rounded-lg text-sm focus:outline-none focus:border-white" required />
-              <input type="tel" placeholder="Téléphone" class="w-full bg-white/10 border border-white/20 text-white placeholder-white/60 px-4 py-2.5 rounded-lg text-sm focus:outline-none focus:border-white" required />
-            </div>
-            <button type="submit" class="w-full bg-white hover:bg-ink-100 text-accent-500 font-bold text-xs uppercase tracking-wider py-3 rounded-full transition-colors flex items-center justify-center gap-2">
-              Demander un RDV <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
-          </form>
+      <div>
+        <div class="font-heading font-bold text-leaf-300 text-sm uppercase tracking-widest mb-4">Contact</div>
+        <div class="space-y-3 text-sm text-white/75">
+          <a href="tel:0602020301" class="flex items-center gap-3 hover:text-white"><i data-lucide="phone" class="w-4 h-4 text-leaf-400"></i> 06 02 02 03 01</a>
+          <a href="mailto:ecovaptoiture@gmail.com" class="flex items-center gap-3 hover:text-white"><i data-lucide="mail" class="w-4 h-4 text-leaf-400"></i> ecovaptoiture@gmail.com</a>
+          <div class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-leaf-400"></i> Saint-Vincent-de-Tyrosse 40230</div>
         </div>
       </div>
-
+      <div>
+        <div class="font-heading font-bold text-sm uppercase tracking-widest mb-4" style="color:#bbd7fc;">Services</div>
+        <div class="space-y-2 text-sm text-white/75">
+          <a href="nettoyage-toiture.html" class="block hover:text-white">Nettoyage toiture</a>
+          <a href="hydrofuge.html" class="block hover:text-white">Hydrofuge</a>
+          <a href="gouttieres.html" class="block hover:text-white">Gouttières</a>
+          <a href="contact.html" class="block hover:text-white">Contact</a>
+        </div>
+      </div>
     </div>
-
-    <!-- BOTTOM BAR -->
-    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-white/50 text-xs">© 2026 Ecovaptoiture — Nettoyage écologique de toiture à la vapeur</p>
-      <div class="flex items-center gap-5">
-        <a href="mentions-legales.html" class="text-white/50 hover:text-white text-xs">Mentions légales</a>
-        <div class="flex items-center gap-2">
-          <a href="#" aria-label="Facebook" class="w-8 h-8 bg-white/5 border border-white/10 hover:bg-accent-500 hover:border-accent-500 rounded-full flex items-center justify-center transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-white/70"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram" class="w-8 h-8 bg-white/5 border border-white/10 hover:bg-accent-500 hover:border-accent-500 rounded-full flex items-center justify-center transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-white/70"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" class="w-8 h-8 bg-white/5 border border-white/10 hover:bg-accent-500 hover:border-accent-500 rounded-full flex items-center justify-center transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-white/70"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-        </div>
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
+      <div>© 2026 Ecovaptoiture · Tous droits réservés</div>
+      <div class="flex items-center gap-6">
+        <a href="mentions-legales.html" class="hover:text-white">Mentions légales</a>
       </div>
     </div>
   </div>
 </footer>
 
 <!-- ═══════════════════════════════════════════════════════════
-     FLOATING MOBILE CTA
+     FLOATING CTA phone
 ════════════════════════════════════════════════════════════ -->
-<div id="floating-cta" class="fixed bottom-6 right-6 z-50 lg:hidden opacity-0 translate-y-4 transition-all duration-500">
-  <a href="tel:0602020301" class="flex items-center justify-center w-14 h-14 bg-accent-500 text-white rounded-full float-cta">
-    <i data-lucide="phone" class="w-6 h-6"></i>
-  </a>
-</div>
+<a href="tel:0602020301" class="fixed bottom-6 right-6 z-40 float-cta w-14 h-14 rounded-full text-white flex items-center justify-center shadow-2xl" style="background: linear-gradient(135deg, #156b3c, #1a6cc2);" aria-label="Appeler">
+  <i data-lucide="phone" class="w-6 h-6"></i>
+</a>
 
 <!-- ═══════════════════════════════════════════════════════════
-     JS
+     SCRIPTS
 ════════════════════════════════════════════════════════════ -->
 <script>
-  if (typeof lucide !== 'undefined') lucide.createIcons();
+  lucide.createIcons();
 
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', function () {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  });
+  // Reveal observer
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), e.target.classList.contains('reveal-stagger') ? (i % 4) * 80 : 0);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-stagger').forEach(el => io.observe(el));
 
-  const burgerBtn = document.getElementById('burger-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+  // Counter animation
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const end = parseFloat(el.dataset.counter);
+      const dur = parseInt(el.dataset.counterDuration) || 1400;
+      const suffix = el.dataset.counterSuffix || '';
+      const start = performance.now();
+      const tick = (t) => {
+        const p = Math.min(1, (t - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(end * eased) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterIO.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-counter]').forEach(el => counterIO.observe(el));
+
+  // Mobile menu
+  const burger = document.getElementById('burger-btn');
   const burgerIcon = document.getElementById('burger-icon');
   const closeIcon = document.getElementById('close-icon');
-  burgerBtn.addEventListener('click', function () {
-    const isOpen = !mobileMenu.classList.contains('hidden');
+  const mobileMenu = document.getElementById('mobile-menu');
+  burger?.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
-    if (isOpen) { burgerIcon.classList.remove('hidden'); closeIcon.classList.add('hidden'); }
-    else { burgerIcon.classList.add('hidden'); closeIcon.classList.remove('hidden'); }
+    burgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
   });
 
-  // Reveal simple
-  const io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  // Before/After slider
+  const baSlider = document.getElementById('ba-slider');
+  const baBefore = baSlider?.querySelector('.ba-before');
+  const baHandle = document.getElementById('ba-handle');
+  if (baSlider && baHandle) {
+    let dragging = false;
+    const setPos = (x) => {
+      const rect = baSlider.getBoundingClientRect();
+      const pct = Math.max(0, Math.min(100, ((x - rect.left) / rect.width) * 100));
+      baBefore.style.clipPath = `inset(0 ${100-pct}% 0 0)`;
+      baHandle.style.left = `${pct}%`;
+    };
+    const onDown = (e) => { dragging = true; e.preventDefault(); };
+    const onUp = () => { dragging = false; };
+    const onMove = (e) => {
+      if (!dragging) return;
+      const x = e.touches ? e.touches[0].clientX : e.clientX;
+      setPos(x);
+    };
+    baHandle.addEventListener('mousedown', onDown);
+    baHandle.addEventListener('touchstart', onDown, { passive: false });
+    window.addEventListener('mouseup', onUp);
+    window.addEventListener('touchend', onUp);
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('touchmove', onMove, { passive: true });
+    // click anywhere on slider to move
+    baSlider.addEventListener('click', (e) => {
+      if (e.target === baHandle || baHandle.contains(e.target)) return;
+      setPos(e.clientX);
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function (el) { io.observe(el); });
+  }
 
-  // Stagger reveal : 80ms entre chaque élément visible
-  const staggerIo = new IntersectionObserver(function (entries) {
-    const visible = entries.filter(function(e){ return e.isIntersecting; });
-    visible.forEach(function (e, i) {
-      setTimeout(function(){ e.target.classList.add('visible'); }, i * 80);
-      staggerIo.unobserve(e.target);
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
-  document.querySelectorAll('.reveal-stagger').forEach(function (el) { staggerIo.observe(el); });
+  // Génère les particules de vapeur
+  function seedVapor(containerId, count) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('div');
+      p.className = 'vapor-particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDelay = (Math.random() * 7) + 's';
+      p.style.animationDuration = (5 + Math.random() * 5) + 's';
+      p.style.setProperty('--dx', (Math.random() * 60 - 30) + 'px');
+      p.style.width = p.style.height = (30 + Math.random() * 50) + 'px';
+      container.appendChild(p);
+    }
+  }
+  seedVapor('vapor-field', 18);
+  seedVapor('vapor-field-devis', 10);
 
-  // Magnetic buttons
-  document.querySelectorAll('.btn-magnetic').forEach(function(btn){
-    btn.addEventListener('mousemove', function(e){
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      btn.style.transform = 'translate(' + (x * 0.2) + 'px, ' + (y * 0.2) + 'px)';
-    });
-    btn.addEventListener('mouseleave', function(){
-      btn.style.transform = '';
-    });
-  });
-
-  // Floating CTA
-  const fcta = document.getElementById('floating-cta');
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 500) {
-      fcta.style.opacity = '1';
-      fcta.style.transform = 'translateY(0)';
-    } else {
-      fcta.style.opacity = '0';
-      fcta.style.transform = 'translateY(16px)';
+  // Particules dans .vapor-field du démo SVG
+  document.querySelectorAll('.vapor-demo-wrap .vapor-field').forEach(f => {
+    f.id = 'vapor-demo-field-' + Math.random().toString(36).slice(2, 8);
+    for (let i = 0; i < 14; i++) {
+      const p = document.createElement('div');
+      p.className = 'vapor-particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDelay = (Math.random() * 7) + 's';
+      p.style.animationDuration = (5 + Math.random() * 5) + 's';
+      p.style.setProperty('--dx', (Math.random() * 60 - 30) + 'px');
+      p.style.width = p.style.height = (30 + Math.random() * 50) + 'px';
+      f.appendChild(p);
     }
   });
 </script>
-
-<!-- JS principal (compteurs animés, slider avant/après, magnétique, reveals stagger, etc.) -->
-<script src="assets/js/app.js"></script>
 
 </body>
 </html>
