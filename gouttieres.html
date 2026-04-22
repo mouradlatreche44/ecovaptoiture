@@ -386,14 +386,18 @@
 
 </script>
 <script>
-
-  // ── Hero steam canvas (variante F) ─────────────────────
+  // ── Hero steam canvas — V1 "fine" (vapeur descend du coin haut-droit) ─────
   (function(){
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function getNozzle(cvs){
+      const r = cvs.getBoundingClientRect();
+      const x = r.width * (0.82 + Math.random() * 0.10);
+      return { x, y: -30 };
+    }
     function initSteam(cvs){
       const ctx = cvs.getContext('2d');
       const isMobile = window.innerWidth < 640;
-      const maxN = isMobile ? 30 : 58;
+      const maxN = isMobile ? 35 : 70;
       let W, H, particles = [];
       function resize(){
         const dpr = window.devicePixelRatio || 1;
@@ -402,30 +406,37 @@
         cvs.width = W*dpr; cvs.height = H*dpr;
         ctx.setTransform(dpr,0,0,dpr,0,0);
       }
-      function spawn(){
-        particles.push({
-          x: Math.random()*W, y: H + 20,
-          r: 30 + Math.random()*70,
-          vy: -0.3 - Math.random()*0.5,
-          vx: (Math.random()-.5)*0.3,
-          life: 0, max: 260 + Math.random()*180,
-          hueShift: Math.random()
-        });
+      function spawn(n){
+        const noz = getNozzle(cvs);
+        for (let k=0; k<n; k++){
+          const angle = Math.PI/2 + (Math.random()-0.5) * 0.22;
+          const speed = 1.8 + Math.random()*1.2;
+          const r0    = 18 + Math.random()*26;
+          particles.push({
+            x: noz.x, y: noz.y,
+            vx: Math.cos(angle)*speed + (Math.random()-.5)*0.3,
+            vy: Math.sin(angle)*speed,
+            r: r0, grow: 0.55,
+            life: 0, max: 130 + Math.random()*90,
+            hue: Math.random()
+          });
+        }
       }
       function tick(){
         ctx.clearRect(0,0,W,H);
-        if (particles.length < maxN && Math.random() < 0.6) spawn();
+        if (particles.length < maxN) spawn(Math.random() < 0.8 ? 2 : 1);
         for (let i=particles.length-1; i>=0; i--){
           const p = particles[i];
-          p.life++; p.x += p.vx; p.y += p.vy; p.r += 0.25;
+          p.life++; p.x += p.vx; p.y += p.vy;
+          p.vy += 0.01; p.vx *= 0.995; p.r += p.grow;
           const t = p.life / p.max;
           if (t > 1){ particles.splice(i,1); continue; }
           const alpha = Math.sin(t*Math.PI) * 0.22;
-          const tint = p.hueShift > .6 ? '134,239,172' : (p.hueShift > .3 ? '255,255,255' : '191,219,254');
+          const tint = p.hue > 0.7 ? '134,239,172' : (p.hue > 0.3 ? '255,255,255' : '191,219,254');
           const grd = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
-          grd.addColorStop(0, 'rgba('+tint+','+alpha+')');
-          grd.addColorStop(0.4, 'rgba('+tint+','+(alpha*0.5)+')');
-          grd.addColorStop(1, 'rgba('+tint+',0)');
+          grd.addColorStop(0,    'rgba('+tint+','+alpha+')');
+          grd.addColorStop(0.45, 'rgba('+tint+','+(alpha*0.5)+')');
+          grd.addColorStop(1,    'rgba('+tint+',0)');
           ctx.fillStyle = grd;
           ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
         }
