@@ -124,6 +124,59 @@
     }
     @media (prefers-reduced-motion: reduce) { canvas.steam { display: none; } }
 
+    /* ═══ COMPARATIF HYDROFUGE — cartes + gouttes ═══ */
+    .hcompare-card { border-radius:20px; overflow:hidden; box-shadow:0 20px 50px -30px rgba(0,0,0,.25); transition:transform .35s cubic-bezier(.23,1,.32,1); display:flex; flex-direction:column; position:relative; }
+    .hcompare-card:hover { transform:translateY(-4px); }
+    .hcompare-card .img-slot { position:relative; aspect-ratio:4/3; overflow:hidden; }
+    .hcompare-card .img-slot img { width:100%; height:100%; object-fit:cover; display:block; }
+    .hcompare-card .body { padding:30px 32px; flex:1; position:relative; z-index:2; }
+    .hcompare-sans { background:#fff; border:1px solid #e5e7eb; }
+    .hcompare-avec { background:linear-gradient(180deg,#166534 0%,#14532d 100%); color:#fff; }
+    .hcompare-avec::before {
+      content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+      background:
+        radial-gradient(ellipse 60% 80% at 100% 0%, rgba(134,239,172,.20), transparent 55%),
+        radial-gradient(ellipse 50% 60% at 0% 100%, rgba(134,239,172,.10), transparent 60%);
+    }
+    .hcompare-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px; font-family:'Baloo 2',sans-serif; }
+    .hcompare-sans .hcompare-tag { color:#9ca3af; }
+    .hcompare-avec .hcompare-tag { color:#86efac; }
+    .hcompare-card h3 { font-family:'Baloo 2',sans-serif; font-weight:700; font-size:24px; margin-bottom:20px; letter-spacing:-0.01em; }
+    .hcompare-sans h3 { color:#14532d; }
+    .hcompare-avec h3 { color:#fff; }
+    .hcompare-card ul { list-style:none; margin:0; padding:0; }
+    .hcompare-card li { display:flex; align-items:flex-start; gap:12px; padding:8px 0; font-size:15px; line-height:1.55; }
+    .hcompare-sans li { color:#374151; }
+    .hcompare-avec li { color:rgba(255,255,255,.92); }
+    .hcompare-card li svg { flex-shrink:0; margin-top:2px; }
+    .rain { position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:1; }
+    .bead {
+      position:absolute; width:14px; height:14px; border-radius:50%;
+      background:radial-gradient(circle at 30% 25%, rgba(240,249,255,.95) 0%, rgba(186,230,253,.75) 45%, rgba(59,130,246,.5) 100%);
+      box-shadow:
+        inset -1.5px -1.5px 3px rgba(0,0,0,.25),
+        inset 1.5px 1.5px 3px rgba(255,255,255,.4),
+        0 2px 4px rgba(0,0,0,.15);
+      opacity:0;
+    }
+    .bead::after { content:""; position:absolute; top:18%; left:22%; width:32%; height:22%; border-radius:50%; background:rgba(255,255,255,.85); }
+    @keyframes beadRoll {
+      0%   { transform:translate(0,0) scale(.5); opacity:0; }
+      8%   { transform:translate(2px,8px) scale(1); opacity:1; }
+      100% { transform:translate(-40px,420px) scale(.9); opacity:0; }
+    }
+    .bead:nth-child(1){left:6%;top:-20px;width:12px;height:12px;animation:beadRoll 4.5s linear infinite;animation-delay:0s}
+    .bead:nth-child(2){left:18%;top:-20px;width:16px;height:16px;animation:beadRoll 5.2s linear infinite;animation-delay:.6s}
+    .bead:nth-child(3){left:30%;top:-20px;width:10px;height:10px;animation:beadRoll 4s linear infinite;animation-delay:1.2s}
+    .bead:nth-child(4){left:42%;top:-20px;width:14px;height:14px;animation:beadRoll 5s linear infinite;animation-delay:1.8s}
+    .bead:nth-child(5){left:54%;top:-20px;width:11px;height:11px;animation:beadRoll 4.8s linear infinite;animation-delay:.3s}
+    .bead:nth-child(6){left:66%;top:-20px;width:15px;height:15px;animation:beadRoll 5.5s linear infinite;animation-delay:2.4s}
+    .bead:nth-child(7){left:76%;top:-20px;width:9px;height:9px;animation:beadRoll 4.2s linear infinite;animation-delay:1.5s}
+    .bead:nth-child(8){left:86%;top:-20px;width:13px;height:13px;animation:beadRoll 5s linear infinite;animation-delay:.9s}
+    .bead:nth-child(9){left:94%;top:-20px;width:11px;height:11px;animation:beadRoll 4.6s linear infinite;animation-delay:3s}
+    .bead:nth-child(10){left:12%;top:-20px;width:13px;height:13px;animation:beadRoll 5.2s linear infinite;animation-delay:2.7s}
+    @media (prefers-reduced-motion: reduce) { .bead { display:none; } }
+
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Hydrofuge de toiture et façade","provider":{"@type":"LocalBusiness","name":"Ecovaptoiture","telephone":"+33602020301"},"areaServed":["Landes","Pyrénées-Atlantiques"],"description":"Hydrofuge microporeux longue durée, traitement anti-mousse écologique."}</script>
 </head>
@@ -264,25 +317,42 @@
       <div class="section-label justify-center">Avec ou sans hydrofuge</div>
       <h2 class="text-3xl sm:text-4xl text-brand-900">Pourquoi ça change tout</h2>
     </div>
+    <p class="text-center text-ink-600 mb-10 reveal">Sans hydrofuge, l'eau pénètre. Avec hydrofuge, elle ruisselle.</p>
     <div class="grid md:grid-cols-2 gap-6 reveal">
-      <div class="bg-white rounded-2xl p-8 border border-ink-200">
-        <div class="text-xs uppercase tracking-widest text-ink-500 mb-3">Sans hydrofuge</div>
-        <h3 class="text-xl text-brand-900 mb-4">Tuile poreuse</h3>
-        <ul class="space-y-3 text-sm text-ink-600">
-          <li class="flex items-start gap-2"><i data-lucide="x" class="w-4 h-4 text-red-500 mt-0.5"></i> L'eau pénètre dans les micropores</li>
-          <li class="flex items-start gap-2"><i data-lucide="x" class="w-4 h-4 text-red-500 mt-0.5"></i> Mousses et lichens réapparaissent en 2-3 ans</li>
-          <li class="flex items-start gap-2"><i data-lucide="x" class="w-4 h-4 text-red-500 mt-0.5"></i> Gel/dégel fissure la tuile à terme</li>
-        </ul>
-      </div>
-      <div class="bg-gradient-to-br from-brand-700 to-brand-800 text-white rounded-2xl p-8">
-        <div class="text-xs uppercase tracking-widest text-brand-300 mb-3">Avec hydrofuge</div>
-        <h3 class="text-xl mb-4">Tuile protégée</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-300 mt-0.5"></i> Effet déperlant, l'eau ruisselle</li>
-          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-300 mt-0.5"></i> Repousse divisée par 3</li>
-          <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-300 mt-0.5"></i> Durée de vie de la toiture prolongée</li>
-        </ul>
-      </div>
+      <!-- SANS -->
+      <article class="hcompare-card hcompare-sans">
+        <div class="img-slot">
+          <img src="assets/img/hydrofuge/tuile-sans.jpg" alt="Tuile de toiture poreuse sans traitement hydrofuge" loading="lazy" decoding="async"/>
+        </div>
+        <div class="body">
+          <div class="hcompare-tag">Sans hydrofuge</div>
+          <h3>Tuile poreuse</h3>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg> L'eau pénètre dans les micropores</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg> Mousses et lichens réapparaissent en 2-3 ans</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg> Gel/dégel fissure la tuile à terme</li>
+          </ul>
+        </div>
+      </article>
+      <!-- AVEC -->
+      <article class="hcompare-card hcompare-avec">
+        <div class="img-slot">
+          <img src="assets/img/hydrofuge/tuile-avec.png" alt="Tuile de toiture avec effet déperlant — gouttes d'eau en perles" loading="lazy" decoding="async"/>
+        </div>
+        <div class="rain" aria-hidden="true">
+          <span class="bead"></span><span class="bead"></span><span class="bead"></span><span class="bead"></span><span class="bead"></span>
+          <span class="bead"></span><span class="bead"></span><span class="bead"></span><span class="bead"></span><span class="bead"></span>
+        </div>
+        <div class="body">
+          <div class="hcompare-tag">Avec hydrofuge</div>
+          <h3>Tuile protégée</h3>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Effet déperlant, l'eau ruisselle</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Repousse divisée par 3</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Durée de vie de la toiture prolongée</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
