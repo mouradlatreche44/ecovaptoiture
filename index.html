@@ -592,11 +592,13 @@
 
         <!-- Badge 100% éco ring animé en haut -->
         <div class="absolute -top-4 -right-4 w-28 h-28 hidden md:flex items-center justify-center">
-          <svg class="absolute inset-0 w-full h-full eco-badge-ring" viewBox="0 0 120 120">
+          <!-- disque de contraste derrière -->
+          <div class="absolute inset-0 rounded-full" style="background: radial-gradient(circle at center, rgba(10,36,71,0.78) 0%, rgba(10,36,71,0.55) 55%, rgba(10,36,71,0) 78%); backdrop-filter: blur(2px);"></div>
+          <svg class="absolute inset-0 w-full h-full eco-badge-ring" viewBox="0 0 120 120" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.55));">
             <defs>
               <path id="circle-path" d="M 60,60 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
             </defs>
-            <text fill="white" font-family="Baloo 2, sans-serif" font-size="11" font-weight="700" letter-spacing="2">
+            <text fill="#ffffff" stroke="rgba(5,20,11,0.65)" stroke-width="2.2" paint-order="stroke fill" font-family="Baloo 2, sans-serif" font-size="11" font-weight="800" letter-spacing="2">
               <textPath href="#circle-path">SANS PRODUIT CHIMIQUE · SANS HAUTE PRESSION · </textPath>
             </text>
           </svg>
