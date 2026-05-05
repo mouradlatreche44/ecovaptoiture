@@ -1,6 +1,6 @@
-# Ecovaptoiture — Site vitrine
+# Écovaptoit — Site vitrine
 
-Site vitrine pour **Ecovaptoiture**, spécialiste du nettoyage écologique de toitures à la vapeur basse pression dans les Landes (40) et les Pyrénées-Atlantiques (64).
+Site vitrine pour **Écovaptoit**, spécialiste du nettoyage écologique de toitures à la vapeur basse pression dans les Landes (40) et les Pyrénées-Atlantiques (64).
 
 ## Stack
 
@@ -21,9 +21,9 @@ Site vitrine pour **Ecovaptoiture**, spécialiste du nettoyage écologique de to
 
 ## Infos client
 
-- **Nom** : Ecovaptoiture
-- **Téléphone** : 06 02 02 03 01
-- **Email** : ecovaptoiture@gmail.com
+- **Nom** : Écovaptoit
+- **Téléphone** : 06 12 34 56 78
+- **Email** : contact@ecovaptoit.fr
 - **Adresse** : Saint-Vincent-de-Tyrosse, 40230
 - **Zone** : Landes (40) & Pyrénées-Atlantiques (64)
 

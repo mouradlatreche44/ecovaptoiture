@@ -1,7 +1,7 @@
-# Handoff : Ecovaptoiture — Site vitrine v2
+# Handoff : Écovaptoit — Site vitrine v2
 
 ## Overview
-Site vitrine pour **Ecovaptoiture**, entreprise de nettoyage écologique de toitures à la vapeur basse pression (Landes 40 / Pyrénées-Atlantiques 64). Ce bundle contient la **v2 refonte** (`index-v2.html`) avec palette alignée au logo (vert feuille + bleu vapeur) et briefs de génération d'images. L'objectif est une page d'accueil convertissante, orientée devis gratuit.
+Site vitrine pour **Écovaptoit**, entreprise de nettoyage écologique de toitures à la vapeur basse pression (Landes 40 / Pyrénées-Atlantiques 64). Ce bundle contient la **v2 refonte** (`index-v2.html`) avec palette alignée au logo (vert feuille + bleu vapeur) et briefs de génération d'images. L'objectif est une page d'accueil convertissante, orientée devis gratuit.
 
 ## About the Design Files
 Les fichiers fournis sont des **références de design en HTML + Tailwind (via CDN)** — des prototypes illustrant l'apparence et le comportement souhaités. Ce ne sont pas des fichiers de production à shipper tels quels.
@@ -115,7 +115,7 @@ Site statique, aucune gestion d'état globale. Interactions locales uniquement (
 ## Assets
 
 ### Logo
-`assets/img/logo-ecovap.png` — logo Ecovaptoiture, à afficher h-20/h-24 dans navbar et h-20 dans footer. Le texte du logo est tracé ÉCO (vert) + VAP (bleu) — la palette du site en dérive.
+`assets/img/logo-ecovap.png` — logo Écovaptoit, à afficher h-20/h-24 dans navbar et h-20 dans footer. Le texte du logo est tracé ÉCO (vert) + VAP (bleu) — la palette du site en dérive.
 
 ### Photos
 **Aucune photo réelle n'est livrée** — tous les emplacements sont des **placeholders** à rayures tramées avec un brief monospace explicite. Les prompts de génération d'image (ChatGPT / Nano Banana) sont dans le fichier `BRIEFS-IMAGES.md`. 10 images à générer, cibles listées avec dimensions + nom de fichier final dans `assets/img/photos/`.

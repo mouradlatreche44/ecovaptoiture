@@ -1,4 +1,4 @@
-# 📸 Briefs d'images — Ecovaptoiture
+# 📸 Briefs d'images — Écovaptoit
 
 Prompts prêts à coller dans **ChatGPT (image)** ou **Nano Banana / Gemini 2.5 Flash Image**.
 Tous les prompts sont pensés pour produire des images **réalistes**, **cohérentes entre elles** (même charte lumière / palette / style de rendu), et **sans texte ni logo** (à ajouter ensuite).

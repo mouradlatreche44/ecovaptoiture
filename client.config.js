@@ -1,20 +1,20 @@
 /**
  * ============================================================
- *  FICHIER DE CONFIGURATION CLIENT — ECOVAPTOITURE
+ *  FICHIER DE CONFIGURATION CLIENT — ÉCOVAPTOIT
  * ============================================================
  */
 
 window.CLIENT = {
 
   // ── IDENTITÉ ─────────────────────────────────────────────
-  nom:          "Ecovaptoiture",
+  nom:          "Écovaptoit",
   slogan:       "Le nettoyage écologique de toiture, sans produit chimique",
-  description:  "Ecovaptoiture : nettoyage vapeur écologique de toitures, terrasses et bardages dans les Landes (40) et Pyrénées-Atlantiques (64). Démoussage, hydrofuge, entretien gouttières.",
+  description:  "Écovaptoit : nettoyage vapeur écologique de toitures, terrasses et bardages dans les Landes (40) et Pyrénées-Atlantiques (64). Démoussage, hydrofuge, entretien gouttières.",
 
   // ── CONTACT ──────────────────────────────────────────────
-  telephone:      "0602020301",
-  telephoneAff:   "06 02 02 03 01",
-  email:          "ecovaptoiture@gmail.com",
+  telephone:      "0612345678",
+  telephoneAff:   "06 12 34 56 78",
+  email:          "contact@ecovaptoit.fr",
   adresse:        "Saint-Vincent-de-Tyrosse, 40230",
   departement:    "Landes (40) & Pyrénées-Atlantiques (64)",
 
